@@ -88,6 +88,8 @@ body {
 }
 
 body {
+  display: grid;
+  place-items: center;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
