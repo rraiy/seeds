@@ -1,4 +1,23 @@
-.main {
-  max-width: 1440px;
-  max-height: 800px;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .main {
+    max-width: 1440px;
+    max-height: 800px;
+    margin-bottom: 100px;
+  }
+  
+  .rocket {
+    margin-bottom: 40px;
+  }
+
+  .title {
+    font-size: 44px;
+    margin-bottom: 60px;
+  }
 }
+
+

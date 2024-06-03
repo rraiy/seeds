@@ -10,7 +10,6 @@ function HomeBanner() {
 
   return (
     <Carousel className={styles.carousel}>
-      <Image src="/image/home_banner.jpg" width={pcWidth} height={pcHeight} alt="123" />
       <Image src="/image/home_banner_2.jpg" width={pcWidth} height={pcHeight} alt="123" />
       <Image src="/image/home_banner_3.jpg" width={pcWidth} height={pcHeight} alt="123" />
     </Carousel>
