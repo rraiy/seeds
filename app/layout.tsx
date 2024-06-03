@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import "styles/globals.scss";
+import "app/styles/globals.scss";
 import { Providers } from "app/providers";
 
 const metaDataBasic = {

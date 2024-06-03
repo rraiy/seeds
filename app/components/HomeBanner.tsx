@@ -1,16 +1,21 @@
 import Image from "next/image";
 
-import styles from "@/styles/components/HomeBanner.module.scss";
+import Carousel from "@/app/components/common/carousel/Carousel";
+import styles from "@/app/styles/components/HomeBanner.module.scss";
+import { BANNER_IMG_SIZE } from "@/app/constant/style/homeBanner";
 
 import bannerImg from "./home_banner.jpg";
+import bannerImg2 from "./home_banner_2.jpg";
 
 const HomeBanner = () => {
-  const a = 1;
+  const pcWidth = BANNER_IMG_SIZE.desktop.width;
+  const pcHeight = BANNER_IMG_SIZE.desktop.height;
 
   return (
-    <div className={styles.image}>
-      <Image src={bannerImg} width={1440} height={800} />
-    </div>
+    <Carousel className={styles.carousel}>
+      <Image src={bannerImg} width={pcWidth} height={pcHeight} alt="123" />
+      <Image src={bannerImg2} width={pcWidth} height={pcHeight} alt="123" />
+    </Carousel>
   );
 };
 
