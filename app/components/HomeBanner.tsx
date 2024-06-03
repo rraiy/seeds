@@ -1,11 +1,8 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import Carousel from "@/app/components/common/carousel/Carousel";
-import styles from "@/app/styles/components/HomeBanner.module.scss";
-import { BANNER_IMG_SIZE } from "@/app/constant/style/homeBanner";
-
-import bannerImg from "./home_banner.jpg";
-import bannerImg2 from "./home_banner_2.jpg";
+import Carousel from '@/app/components/common/carousel/Carousel';
+import styles from '@/app/styles/components/HomeBanner.module.scss';
+import BANNER_IMG_SIZE from '@/app/constant/style/homeBanner';
 
 const HomeBanner = () => {
   const pcWidth = BANNER_IMG_SIZE.desktop.width;
@@ -13,8 +10,9 @@ const HomeBanner = () => {
 
   return (
     <Carousel className={styles.carousel}>
-      <Image src={bannerImg} width={pcWidth} height={pcHeight} alt="123" />
-      <Image src={bannerImg2} width={pcWidth} height={pcHeight} alt="123" />
+      <Image src={'/image/home_banner.jpg'} width={pcWidth} height={pcHeight} alt="123" />
+      <Image src={'/image/home_banner_2.jpg'} width={pcWidth} height={pcHeight} alt="123" />
+      <Image src={'/image/home_banner_3.jpg'} width={pcWidth} height={pcHeight} alt="123" />
     </Carousel>
   );
 };

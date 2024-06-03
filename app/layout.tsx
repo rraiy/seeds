@@ -1,21 +1,21 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import "app/styles/globals.scss";
-import { Providers } from "app/providers";
+import 'app/styles/globals.scss';
+import { Providers } from 'app/providers';
 
 const metaDataBasic = {
-  title: "喜茲體能 - 適合所有人的肌力品牌",
-  description: "適合所有人的肌力體能訓練品牌",
+  title: '喜茲體能 - 適合所有人的肌力品牌',
+  description: '適合所有人的肌力體能訓練品牌',
 };
 
 export const metadata: Metadata = {
   ...metaDataBasic,
-  keywords: ["重訓", "體能", "健身", "越野跑"],
+  keywords: ['重訓', '體能', '健身', '越野跑'],
   // metadataBase: new URL("https://acme.com'"),
   openGraph: {
     ...metaDataBasic,
-    type: "website",
-    url: "",
+    type: 'website',
+    url: '',
     images: [],
   },
   twitter: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     // siteId: "1467726470533754880",
     // creator: "@nextjs",
     // creatorId: "1467726470533754880",
-    images: ["https://nextjs.org/og.png"], // Must be an absolute URL
+    images: ['https://nextjs.org/og.png'], // Must be an absolute URL
   },
 };
 

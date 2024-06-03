@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import clsx from "clsx";
-import { Dispatch, SetStateAction } from "react";
-import { Wrap, WrapItem } from "@chakra-ui/react";
+import clsx from 'clsx';
+import { Dispatch, SetStateAction } from 'react';
+import { Wrap, WrapItem } from '@chakra-ui/react';
 
-import styles from "@/app/styles/components/common/carousel/Dots.module.scss";
+import styles from '@/app/styles/components/common/carousel/Dots.module.scss';
 
 interface Props {
   idxArr: Array<number>;

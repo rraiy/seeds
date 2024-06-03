@@ -1,6 +1,6 @@
 // chakra theme define
 
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
   fonts: {
@@ -8,8 +8,8 @@ const theme = extendTheme({
     body: `Noto Serif TC,sans-serif`,
   },
   brand: {
-    primary: "gray",
-    secondary: "#2B2828",
+    primary: 'gray',
+    secondary: '#2B2828',
   },
 });
 
