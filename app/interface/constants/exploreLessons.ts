@@ -7,8 +7,8 @@ interface LESSONS_INFO_ITEM {
   description: string;
 }
 
-type LESSONS_INFO = {
+type iLESSONS_INFO = {
   [key in LessonKey]: LESSONS_INFO_ITEM;
 };
 
-export default LESSONS_INFO;
+export default iLESSONS_INFO;

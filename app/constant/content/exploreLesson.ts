@@ -1,6 +1,6 @@
-import ILESSONS_INFO from '@/app/interface/constants/exploreLessons';
+import iLESSONS_INFO from '@/app/interface/constants/exploreLessons';
 
-const LESSONS_INFO: ILESSONS_INFO = {
+const LESSONS_INFO: iLESSONS_INFO = {
   physical: {
     name: '肌力與體能',
     description: '肌力與體能ㄉ描述',

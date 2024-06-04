@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import styles from '@/app/styles/components/common/carousel/Carousel.module.scss';
-import { ReactElement, useState } from 'react';
+import { ReactElement } from 'react';
 
 const settings = {
   dots: true,
@@ -22,7 +22,7 @@ const settings = {
       <ul className={styles['dot-container']}>{dots} </ul>
     </div>
   ),
-  customPaging: (currentIdx: number) => <span className={clsx(styles.dot)}>&#9679;</span>,
+  customPaging: () => <span className={clsx(styles.dot)}>&#9679;</span>,
   dotsClass: clsx('slick-dots', styles.dots),
 };
 
@@ -32,8 +32,6 @@ interface Props {
 }
 
 const Carousel = ({ children, className }: Props) => {
-  const dotsArr = Array.from({ length: children.length }, (_, i) => i);
-
   return (
     <div className={styles.container}>
       <Slider className={className} {...settings}>
