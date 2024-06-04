@@ -1,0 +1,40 @@
+@import '@/app/styles/mixins/animation.scss';
+
+.container {
+  position: relative;
+
+  .green {
+    position: absolute;
+    top: 264px;
+    left: 80px;
+    @include left-right-animation(4s);
+  }
+
+  .orange {
+    position: absolute;
+    top: 400px;
+    left: 292px;
+    @include up-down-animation(3s);
+  }
+
+  .yellow {
+    position: absolute;
+    top: 272px;
+    left: 732px;
+    @include upper-right-lower-left-animation;
+  }
+
+  .blue {
+    position: absolute;
+    top: 556px;
+    left: 524px;
+    @include upper-left-lower-right(3s);
+  }
+
+  .red {
+    position: absolute;
+    top: 24px;
+    left: 600px;
+    @include upper-left-lower-right(3s);
+  }
+}

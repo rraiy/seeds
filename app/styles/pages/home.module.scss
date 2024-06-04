@@ -1,3 +1,5 @@
+@import '@/app/styles/mixins/animation.scss';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -11,7 +13,10 @@
   }
 
   .rocket {
+    @include up-down-animation;
     margin-bottom: 40px;
+    // transition: top 2s ease-in-out 0.5s;
+    
   }
 
   .title {

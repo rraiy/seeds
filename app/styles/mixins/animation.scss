@@ -1,0 +1,74 @@
+
+// position move
+@keyframes up-down{
+  0% {
+    transform: translate(0, -20px) scale(1);    
+  }
+  100% {
+    transform: translate(0, 20px) scale(1.1);
+  }
+}
+
+@keyframes left-right{
+  0% {
+    transform: translate(-20px, 0) scale(1);    
+  }
+  100% {
+    transform: translate(20px, 0) scale(1.1);
+  }
+}
+
+@keyframes upper-right-lower-left{
+  0% {
+    transform: translate(-20px, 0) scale(1);    
+  }
+  100% {
+    transform: translate(20px, 20px) scale(1.1);
+  }
+}
+
+@keyframes upper-left-lower-right{
+  0% {
+    transform: translate(-20px, 0) scale(1);    
+  }
+  100% {
+    transform: translate(20px, -30px) scale(1.1);
+  }
+}
+
+@mixin up-down-animation($duration:4s) {
+  animation: up-down $duration infinite alternate;
+}
+
+@mixin left-right-animation($duration:4s, $delay:0s) {
+  animation: left-right $duration infinite alternate;
+}
+
+@mixin upper-right-lower-left-animation($duration:4s) {
+  animation: upper-right-lower-left $duration infinite alternate;
+}
+
+@mixin upper-left-lower-right($duration:4s) {
+  animation: upper-right-lower-left $duration infinite alternate;
+}
+
+
+// special effects
+@keyframes shining {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 10px yellow;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@mixin shining-animation {
+  animation: shining 2s infinite;
+}
