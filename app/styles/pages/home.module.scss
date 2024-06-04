@@ -12,15 +12,21 @@
     margin-bottom: 100px;
   }
 
-  .rocket {
-    @include up-down-animation;
-    margin-bottom: 40px;
-    // transition: top 2s ease-in-out 0.5s;
-    
-  }
+  .explore-lesson-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 268px;
 
-  .title {
-    font-size: 44px;
-    margin-bottom: 60px;
+    .rocket {
+      @include up-down-animation;
+      margin-bottom: 40px;
+    }
+  
+    .title {
+      font-size: 44px;
+      margin-bottom: 60px;
+    }
   }
 }

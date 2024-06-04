@@ -1,7 +1,5 @@
-import Image from 'next/image';
-
-import HomeBanner from '@/app/components/HomeBanner';
-import PlanetTrack from '@/app/components/common/planet/PlanetTrack';
+import ExploreLessons from '@/app/components/home/ExploreLessons';
+import HomeBanner from '@/app/components/home/HomeBanner';
 import styles from '@/app/styles/pages/home.module.scss';
 
 export default function Home() {
@@ -10,9 +8,7 @@ export default function Home() {
       <main className={styles.main}>
         <HomeBanner />
       </main>
-      <Image className={styles.rocket} src="/image/icon_img/rocket.png" width={60} height={106} alt="class rocket" />
-      <h2 className={styles.title}>探索課程</h2>
-      <PlanetTrack />
+      <ExploreLessons />
     </div>
   );
 }
