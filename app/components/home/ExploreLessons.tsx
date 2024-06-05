@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import PlanetTrack from '@/app/components/common/planet/PlanetTrack';
+import PlanetTrack from '@/app/components/planet/PlanetTrack';
 import styles from '@/app/styles/pages/home.module.scss';
 
 const ExploreLessons = () => {

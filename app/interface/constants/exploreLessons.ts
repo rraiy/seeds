@@ -1,14 +1,25 @@
-const LESSON_KEY = ['physical', 'advanced', 'running'] as const;
+// TODO: remove
+// const LESSON_KEY = ['physical', 'advanced', 'running'] as const;
 
-type LessonKey = (typeof LESSON_KEY)[number];
+// type LessonKey = (typeof LESSON_KEY)[number];
 
-interface LESSONS_INFO_ITEM {
+export interface PopupContent {
   name: string;
   description: string;
+  subItem: string[];
 }
 
-type iLESSONS_INFO = {
-  [key in LessonKey]: LESSONS_INFO_ITEM;
-};
+interface Planet {
+  className: string;
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+}
 
-export default iLESSONS_INFO;
+interface PlanetInfo {
+  popup: PopupContent;
+  planet: Planet;
+}
+
+export default PlanetInfo;

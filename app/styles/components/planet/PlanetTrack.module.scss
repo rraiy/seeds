@@ -3,18 +3,28 @@
 .container {
   position: relative;
 
+  > a {
+    > img:not(.track){
+      cursor: pointer;
+  
+      &:hover {
+        filter: drop-shadow(2mm 4mm 2mm rgb(249, 233, 86, 0.8)) ;
+      }
+    }
+  }
+
   .green {
     position: absolute;
     top: 264px;
     left: 80px;
-    @include left-right-animation(4s);
+    @include left-right-animation(4.5s);
   }
 
   .orange {
     position: absolute;
     top: 400px;
     left: 292px;
-    @include up-down-animation(3s);
+    @include up-down-animation(4.8s);
   }
 
   .yellow {
@@ -28,13 +38,13 @@
     position: absolute;
     top: 556px;
     left: 524px;
-    @include upper-left-lower-right(3s);
+    @include lower-right-upper-left-animation(5s);
   }
 
   .red {
     position: absolute;
     top: 24px;
     left: 600px;
-    @include upper-left-lower-right(3s);
+    @include upper-left-lower-right-animation(4.3s);
   }
 }
