@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.card-container {
+  position: relative;
+
+  .button {
+    position: absolute;
+    width: 136px;
+    height: 48px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 60px;
+    background-color: rgba(43,40,40, 0.95);
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}

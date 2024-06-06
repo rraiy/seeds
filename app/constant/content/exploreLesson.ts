@@ -4,9 +4,9 @@ import styles from '@/app/styles/components/planet/PlanetTrack.module.scss';
 const LESSONS_INFO: PlanetInfo[] = [
   {
     popup: {
-      name: '__',
-      description: '__',
-      subItem: ['__'],
+      name: 'mock',
+      description: 'mock',
+      subItem: ['mock'],
     },
     planet: {
       className: styles.green,
@@ -46,9 +46,9 @@ const LESSONS_INFO: PlanetInfo[] = [
   },
   {
     popup: {
-      name: '__',
-      description: '__',
-      subItem: ['__'],
+      name: 'mock',
+      description: 'mock',
+      subItem: ['mock'],
     },
     planet: {
       className: styles.blue,
@@ -60,9 +60,9 @@ const LESSONS_INFO: PlanetInfo[] = [
   },
   {
     popup: {
-      name: '__',
-      description: '__',
-      subItem: ['__'],
+      name: 'mock',
+      description: 'mock',
+      subItem: ['mock'],
     },
     planet: {
       className: styles.red,
