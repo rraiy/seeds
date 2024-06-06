@@ -7,9 +7,27 @@ const theme = extendTheme({
     heading: `'Noto Serif TC',sans-serif`,
     body: `'Noto Serif TC',sans-serif`,
   },
-  brand: {
-    primary: 'gray',
-    secondary: '#2B2828',
+  colors: {
+    brand: {
+      500: '#2B2828', // primary
+      600: 'rgba(43,40,40,0.5)',
+      // secondary: '#ECEBEB',
+    },
+  },
+  components: {
+    Button: {
+      baseStyle: {},
+      sizes: {
+        sm: {
+          w: '136px',
+          height: '48px',
+          bg: 'brand',
+          color: '#fff',
+          fontSize: '20px',
+          borderRadius: '60px',
+        },
+      },
+    },
   },
 });
 

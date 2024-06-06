@@ -28,7 +28,9 @@ const MultiCards = ({ cardsContent }: Props) => {
             <Image width={width} height={height} src={imgSrc} alt={alt} />
             {card.buttonText && card.buttonLink && (
               <Link href={card.buttonLink}>
-                <Button className={styles.button}>{card.buttonText}</Button>
+                <Button className={styles.button} size={'sm'} colorScheme="brand">
+                  {card.buttonText}
+                </Button>
               </Link>
             )}
           </div>
