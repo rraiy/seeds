@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 
-import 'app/styles/globals.scss';
+import Header from '@/app/components/common/Header';
 import { Providers } from 'app/providers';
+
+import 'app/styles/globals.scss';
 
 const metaDataBasic = {
   title: '喜茲體能 - 適合所有人的肌力品牌',
@@ -36,7 +38,10 @@ export default function RootLayout({
   return (
     <html lang="zh">
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );

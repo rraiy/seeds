@@ -22,4 +22,8 @@ interface PlanetInfo {
   planet: Planet;
 }
 
+export type tExploreInfo = {
+  title: string;
+};
+
 export default PlanetInfo;

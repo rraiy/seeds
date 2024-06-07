@@ -1,7 +1,9 @@
 import clsx from 'clsx';
 
+import ABOUT from '@/app/constants/content/home/about';
 import ExploreLessons from '@/app/components/home/ExploreLessons';
 import HomeBanner from '@/app/components/home/HomeBanner';
+import MONTHLY_CLASS from '@/app/constants/content/home/monthlyClass';
 import TextWithCards from '@/app/components/common/TextWithCards';
 import TextImageSection from '@/app/components/common/TextImageSection';
 
@@ -15,13 +17,13 @@ export default function Home() {
       </main>
       <ExploreLessons />
       <TextImageSection
-        title="最新課表"
-        text="課表統一為當月的一號更新。"
-        imgSrc="/image/month.jpg"
-        imgAlt="五月喜茲體能課表"
+        title={MONTHLY_CLASS.title}
+        text={MONTHLY_CLASS.text}
+        imgSrc={MONTHLY_CLASS.imgSrc}
+        imgAlt={MONTHLY_CLASS.imgAlt}
         titleClass={styles.title}
       />
-      <TextWithCards />
+      <TextWithCards title={ABOUT.title} text={ABOUT.text} titleClass={styles.title} />
     </div>
   );
 }

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 
 import HoverPlanet from '@/app/components/planet/HoverPlanet';
-import LESSONS_INFO from '@/app/constant/content/exploreLesson';
+import LESSONS_INFO from '@/app/constants/content/home/exploreLesson';
 import styles from '@/app/styles/components/planet/PlanetTrack.module.scss';
 
 const PlanetTrack = () => {

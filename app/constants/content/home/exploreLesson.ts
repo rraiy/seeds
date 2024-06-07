@@ -1,5 +1,9 @@
-import PlanetInfo from '@/app/interface/constants/exploreLessons';
+import PlanetInfo, { tExploreInfo } from '@/app/interface/constants/exploreLessons';
 import styles from '@/app/styles/components/planet/PlanetTrack.module.scss';
+
+export const EXPLORE_INFO: tExploreInfo = {
+  title: '探索課程',
+};
 
 const LESSONS_INFO: PlanetInfo[] = [
   {
