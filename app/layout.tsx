@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 
-import Header from '@/app/components/common/Header';
 import { Providers } from 'app/providers';
 
 import 'app/styles/globals.scss';
@@ -38,10 +37,7 @@ export default function RootLayout({
   return (
     <html lang="zh">
       <body>
-        <Providers>
-          <Header />
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
