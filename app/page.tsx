@@ -12,7 +12,7 @@ import styles from '@/app/styles/pages/home.module.scss';
 export default function Home() {
   return (
     <div className={styles.container}>
-      <main className={clsx(styles.main, 'fill-container')}>
+      <main className={'fill-container'}>
         <HomeBanner />
       </main>
       <ExploreLessons />
