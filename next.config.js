@@ -6,4 +6,10 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  webpack(config, { dev }) {
+    if (dev) {
+      config.devtool = 'source-map';
+    }
+    return config;
+  },
 };

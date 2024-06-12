@@ -10,7 +10,7 @@ type tImgCardInfo = {
   width: number;
   height: number;
   buttonText?: string;
-  buttonColor?: any;
+  buttonColor?: string;
   buttonLink?: string;
 };
 
