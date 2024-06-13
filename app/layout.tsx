@@ -39,11 +39,9 @@ export default function RootLayout({
   return (
     <html lang="zh">
       <body>
-        <Providers>
-          <Header />
-          {children}
-          <Footer />
-        </Providers>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );

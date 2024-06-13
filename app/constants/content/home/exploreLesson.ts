@@ -11,6 +11,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       name: 'mock',
       description: 'mock',
       subItem: ['mock'],
+      link: '/',
     },
     planet: {
       className: styles.green,
@@ -18,6 +19,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       width: 88,
       height: 88,
       alt: 'green',
+      link: '/',
     },
   },
   {
@@ -25,6 +27,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       name: '肌力與體能',
       description: '肌力與體能的描述',
       subItem: ['積體1', '積體2', '積體3'],
+      link: '/',
     },
     planet: {
       className: styles.orange,
@@ -32,6 +35,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       width: 144,
       height: 144,
       alt: 'universe',
+      link: '/',
     },
   },
   {
@@ -39,6 +43,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       name: '跑步課程',
       description: '跑步課程的描述',
       subItem: ['跑步1', '跑步2', '跑步3'],
+      link: '/',
     },
     planet: {
       className: styles.yellow,
@@ -46,6 +51,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       width: 164,
       height: 156,
       alt: 'universe',
+      link: '/',
     },
   },
   {
@@ -53,6 +59,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       name: 'mock',
       description: 'mock',
       subItem: ['mock'],
+      link: '/',
     },
     planet: {
       className: styles.blue,
@@ -60,13 +67,15 @@ const LESSONS_INFO: PlanetInfo[] = [
       width: 188,
       height: 108,
       alt: 'universe',
+      link: '/',
     },
   },
   {
     popup: {
-      name: 'mock',
-      description: 'mock',
-      subItem: ['mock'],
+      name: '我ㄉ世界',
+      description: '啊囉哈啊囉哈啊囉哈啊囉哈啊囉哈',
+      subItem: ['連鎖', '咖啡', '透明杯子'],
+      link: '/',
     },
     planet: {
       className: styles.red,
@@ -74,6 +83,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       width: 88,
       height: 88,
       alt: 'universe',
+      link: '/',
     },
   },
 ];
