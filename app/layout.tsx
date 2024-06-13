@@ -4,7 +4,7 @@ import Footer from '@/app/components/footer/Footer';
 import Header from '@/app/components/header/Header';
 import { Providers } from 'app/providers';
 
-import 'app/styles/globals.scss';
+import 'app/styles/globals.css';
 
 const metaDataBasic = {
   title: '喜茲體能 - 適合所有人的肌力品牌',

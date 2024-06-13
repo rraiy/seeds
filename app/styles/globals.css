@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: 'Noto Serif TC';
@@ -95,7 +98,6 @@ body {
   display: grid;
   place-items: center;
   color: rgb(var(--foreground-rgb));
-  // background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 a {
