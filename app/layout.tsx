@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh">
-      <body>
+      <body className="max-w-full">
         <Header />
         {children}
         <Footer />

@@ -19,12 +19,10 @@ interface Props {
 }
 
 const HoverPlanet = ({ className, src, width, height, alt, popupContent }: Props) => {
-  console.log(popupContent);
-
   return (
     <Tooltip
       className={clsx(className, 'hover:z-10')}
-      content={<LessonTooltipContent content={popupContent} btnText="瞭解更多" />}
+      content={<LessonTooltipContent content={popupContent} btnText="了解更多" />}
     >
       {popupContent.link ? (
         <Link href={popupContent.link}>

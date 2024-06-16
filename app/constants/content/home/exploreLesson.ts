@@ -56,7 +56,7 @@ const LESSONS_INFO: PlanetInfo[] = [
   },
   {
     popup: {
-      name: 'mock',
+      name: 'mock2',
       description: 'mock',
       subItem: ['mock'],
       link: '/',

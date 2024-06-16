@@ -1,6 +1,6 @@
 import { Box, Stack, Link, Popover, PopoverTrigger, PopoverContent, useColorModeValue } from '@chakra-ui/react';
 
-import NavItem from '@/app/constants/content/home/header';
+import NavItem from '@/app/constants/content/header';
 import DesktopSubNav from '@/app/components/header/DesktopSubNav';
 
 const DesktopNav = () => {

@@ -1,119 +1,85 @@
-'use client';
-
 import Image from 'next/Image';
-import {
-  Box,
-  chakra,
-  Container,
-  Link,
-  SimpleGrid,
-  Stack,
-  Text,
-  VisuallyHidden,
-  Input,
-  IconButton,
-  useColorModeValue,
-} from '@chakra-ui/react';
-import { ReactNode } from 'react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
-import { BiMailSend } from 'react-icons/bi';
+import Link from 'next/Link';
 
-const SocialButton = ({ children, label, href }: { children: ReactNode; label: string; href: string }) => {
+import FOOTER_INFO from '@/app/constants/content/footer';
+
+const Footer = () => {
   return (
-    <chakra.button
-      // bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-      rounded={'full'}
-      w={8}
-      h={8}
-      cursor={'pointer'}
-      as={'a'}
-      href={href}
-      display={'inline-flex'}
-      alignItems={'center'}
-      justifyContent={'center'}
-      transition={'background 0.3s ease'}
-      _hover={
-        {
-          // bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-        }
-      }
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
+    <footer className="bg-primary w-full flex justify-center">
+      <div className="w-max-[1440px] w-5/6 mx-automax-w-screen-xl p-4 py-20">
+        <div className="md:flex md:justify-between">
+          <div className="mb-6 md:mb-0">
+            <Link href="/">
+              <Image className="me-3" src="/image/footer-logo.png" width={180} height={48} alt="喜茲體能" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-20">
+            {FOOTER_INFO.map((item) => {
+              return (
+                <div key={item.label}>
+                  <h2 className="mb-6 font-semibold text-white uppercase text-l">{item.label}</h2>
+                  <ul className="text-buttonStroke  font-medium">
+                    {item.children &&
+                      item.children.map((subItem) => (
+                        <li key={subItem.label} className="py-2">
+                          <Link href={subItem.href} className="hover:underline text-white text-sm">
+                            {subItem.label}
+                          </Link>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <hr className="my-6 border-color-buttonStroke sm:mx-auto lg:my-8" />
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <span className="text-sm text-buttonStroke sm:text-center ">
+            © 2024{' '}
+            <Link href="/" className="hover:underline">
+              Seeds Training{' '}
+            </Link>
+            All Rights Reserved.
+          </span>
+          <div className="flex mt-4 sm:justify-center sm:mt-0">
+            <Link href="#" className="text-buttonStroke hover:text-white dark:hover:text-white">
+              <svg
+                className="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 8 19"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <span className="sr-only">Facebook page</span>
+            </Link>
+
+            <Link href="#" className="text-buttonStroke hover:text-white dark:hover:text-white ms-5">
+              <svg
+                className="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 17"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <span className="sr-only">Youtube page</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
-
-const ListHeader = ({ children }: { children: ReactNode }) => {
-  return (
-    <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
-      {children}
-    </Text>
-  );
-};
-
-export default function LargeWithNewsletter() {
-  return (
-    <Box>
-      <Container as={Stack} maxW={'6xl'} py={10}>
-        <SimpleGrid templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }} spacing={8}>
-          <Stack spacing={6}>
-            <Box>
-              <Image src="/image/footer-logo.png" width={180} height={48} alt="喜茲體能" />
-            </Box>
-            <Text fontSize={'sm'}>© 2022 Chakra Templates. All rights reserved</Text>
-            <Stack direction={'row'} spacing={6}>
-              <SocialButton label={'Twitter'} href={'#'}>
-                <FaTwitter />
-              </SocialButton>
-              <SocialButton label={'YouTube'} href={'#'}>
-                <FaYoutube />
-              </SocialButton>
-              <SocialButton label={'Instagram'} href={'#'}>
-                <FaInstagram />
-              </SocialButton>
-            </Stack>
-          </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Company</ListHeader>
-            <Link href={'#'}>About us</Link>
-            <Link href={'#'}>Blog</Link>
-            <Link href={'#'}>Contact us</Link>
-            <Link href={'#'}>Pricing</Link>
-            <Link href={'#'}>Testimonials</Link>
-          </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Support</ListHeader>
-            <Link href={'#'}>Help Center</Link>
-            <Link href={'#'}>Terms of Service</Link>
-            <Link href={'#'}>Legal</Link>
-            <Link href={'#'}>Privacy Policy</Link>
-            <Link href={'#'}>Satus</Link>
-          </Stack>
-          <Stack align={'flex-start'}>
-            <ListHeader>Stay up to date</ListHeader>
-            <Stack direction={'row'}>
-              <Input
-                placeholder={'Your email address'}
-                // bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-                border={0}
-                _focus={{
-                  bg: 'whiteAlpha.300',
-                }}
-              />
-              <IconButton
-                // bg={useColorModeValue('green.400', 'green.800')}
-                // color={useColorModeValue('white', 'gray.800')}
-                _hover={{
-                  bg: 'green.600',
-                }}
-                aria-label="Subscribe"
-                icon={<BiMailSend />}
-              />
-            </Stack>
-          </Stack>
-        </SimpleGrid>
-      </Container>
-    </Box>
-  );
-}
+export default Footer;

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '@chakra-ui/react';
 
+import Button from '@/app/components/common/Button';
 import styles from '@/app/styles/components/common/MultiCards.module.scss';
 
 type tImgCardInfo = {
@@ -28,9 +28,7 @@ const MultiCards = ({ cardsContent }: Props) => {
             <Image width={width} height={height} src={imgSrc} alt={alt} />
             {card.buttonText && card.buttonLink && (
               <Link href={card.buttonLink}>
-                <Button className={styles.button} size={'sm'} colorScheme="brand">
-                  {card.buttonText}
-                </Button>
+                <Button text={card.buttonText} className={styles.button} />
               </Link>
             )}
           </div>
