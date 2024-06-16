@@ -1,5 +1,5 @@
-import Image from 'next/Image';
-import Link from 'next/Link';
+import Image from 'next/image';
+import Link from 'next/link';
 import { FaFacebookSquare, FaInstagramSquare, FaLine } from 'react-icons/fa';
 
 import FOOTER_INFO from '@/app/constants/content/footer';
