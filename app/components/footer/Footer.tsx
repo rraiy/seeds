@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex justify-between">
           <div className="mb-6">
             <Link href="/">
-              <Image className="me-3" src="/image/footer-logo.png" width={180} height={48} alt="喜茲體能" />
+              <Image className="me-3" src="/images/footer-logo.png" width={180} height={48} alt="喜茲體能" />
             </Link>
           </div>
           <div className="grid grid-cols-3 gap-20">

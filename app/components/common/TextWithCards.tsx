@@ -6,7 +6,7 @@ import styles from '@/app/styles/components/common/TextWithCards.module.scss';
 
 const mock = [
   {
-    imgSrc: '/image/about/info.png',
+    imgSrc: '/images/about/info.png',
     alt: 'Image 1',
     width: 360,
     height: 440,
@@ -15,7 +15,7 @@ const mock = [
     buttonLink: '/',
   },
   {
-    imgSrc: '/image/about/coach.png',
+    imgSrc: '/images/about/coach.png',
     alt: 'Image 2',
     width: 360,
     height: 440,
@@ -24,7 +24,7 @@ const mock = [
     buttonLink: '/',
   },
   {
-    imgSrc: '/image/about/fee.png',
+    imgSrc: '/images/about/fee.png',
     alt: '費用說明',
     width: 360,
     height: 440,

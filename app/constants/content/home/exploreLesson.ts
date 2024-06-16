@@ -15,7 +15,7 @@ const LESSONS_INFO: PlanetInfo[] = [
     },
     planet: {
       className: styles.green,
-      src: '/image/universe/green_planet.png',
+      src: '/images/universe/green_planet.png',
       width: 88,
       height: 88,
       alt: 'green',
@@ -31,7 +31,7 @@ const LESSONS_INFO: PlanetInfo[] = [
     },
     planet: {
       className: styles.orange,
-      src: '/image/universe/orange_planet.png',
+      src: '/images/universe/orange_planet.png',
       width: 144,
       height: 144,
       alt: 'universe',
@@ -47,7 +47,7 @@ const LESSONS_INFO: PlanetInfo[] = [
     },
     planet: {
       className: styles.yellow,
-      src: '/image/universe/yellow_planet.png',
+      src: '/images/universe/yellow_planet.png',
       width: 164,
       height: 156,
       alt: 'universe',
@@ -63,7 +63,7 @@ const LESSONS_INFO: PlanetInfo[] = [
     },
     planet: {
       className: styles.blue,
-      src: '/image/universe/blue_planet.png',
+      src: '/images/universe/blue_planet.png',
       width: 188,
       height: 108,
       alt: 'universe',
@@ -79,7 +79,7 @@ const LESSONS_INFO: PlanetInfo[] = [
     },
     planet: {
       className: styles.red,
-      src: '/image/universe/red_planet.png',
+      src: '/images/universe/red_planet.png',
       width: 88,
       height: 88,
       alt: 'universe',

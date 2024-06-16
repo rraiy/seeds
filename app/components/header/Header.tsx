@@ -19,7 +19,7 @@ const Header = () => {
     <nav className="max-w-screen-xl w-full h-24 z-10 flex justify-center items-center bg-white/5">
       <div className="w-full flex justify-between items-center mx-auto p-4 md:">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/image/logo.png" width={180} height={48} alt="喜茲體能 Logo" />
+          <Image src="/images/logo.png" width={180} height={48} alt="喜茲體能 Logo" />
         </Link>
 
         <div className="md:hidden">
