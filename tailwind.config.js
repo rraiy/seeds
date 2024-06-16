@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
@@ -21,6 +23,15 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities }) {
+      addUtilities({
+        '.home-img-exclude-bg-elements img:not(.bg-elements)': {
+          width:'100px',
+          zIndex:10
+        },
+      });
+    }),
+  ],
 }
 

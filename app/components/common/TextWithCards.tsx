@@ -32,12 +32,6 @@ const mock = [
     buttonColor: 'second',
     buttonLink: '/',
   },
-  // {
-  //   imgSrc: '/image/about/fee.jpg',
-  //   alt: 'Image 4',
-  //   width: 360,
-  //   height: 440,
-  // },
 ];
 
 interface Props {
@@ -48,15 +42,17 @@ interface Props {
 
 const TextWithCards = ({ title, titleClass, text }: Props) => {
   return (
-    <Grid templateRows="256px 440px">
-      <GridItem className={styles['text-container']}>
-        <h2 className={titleClass}>{title}</h2>
-        {text}
-      </GridItem>
-      <GridItem>
-        <MultiCards cardsContent={mock} />
-      </GridItem>
-    </Grid>
+    <div className="mb-24 z-10">
+      <Grid templateRows="256px 440px">
+        <GridItem className={styles['text-container']}>
+          <h2 className={titleClass}>{title}</h2>
+          {text}
+        </GridItem>
+        <GridItem>
+          <MultiCards cardsContent={mock} />
+        </GridItem>
+      </Grid>
+    </div>
   );
 };
 

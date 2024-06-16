@@ -2,18 +2,18 @@
 
 import Image from 'next/Image';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 
 import Button from '@/app/components/common/Button';
-import Drawer from '@/app/components/common/overlay/Drawer';
+// import Drawer from '@/app/components/common/overlay/Drawer';
 import Dropdown from '@/app/components/common/overlay/Dropdown';
 import HEADER_ITEMS from '@/app/constants/content/header';
 
 const Header = () => {
   const [openLabel, setOpenLabel] = useState<string | null>(null);
-  const [openDrawer, setOpenDrawer] = useState<boolean>(false);
+  // const [openDrawer, setOpenDrawer] = useState<boolean>(false);
 
   return (
     <nav className="max-w-screen-xl w-full h-24 z-10 flex justify-center items-center bg-white/5">
@@ -45,7 +45,7 @@ const Header = () => {
         <button
           type="button"
           className="hidden md:inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg  hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-          onClick={() => setOpenDrawer(true)}
+          // onClick={() => setOpenDrawer(true)}
         >
           <FaBars className="h-8 w-8 text-blue-500" />
         </button>

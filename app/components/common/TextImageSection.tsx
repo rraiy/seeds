@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { Box, Flex, Spacer, GridItem } from '@chakra-ui/react';
+import { Box, Flex, Spacer } from '@chakra-ui/react';
 
 import styles from '@/app/styles/components/common/TextImageSection.module.scss';
 
@@ -20,8 +20,8 @@ const TextImageSection = ({ title, titleClass, text, imgSrc, imgAlt }: Props) =>
         <p>{text}</p>
       </Flex>
       <Spacer />
-      <Box>
-        <Image width={800} height={800} src={imgSrc} alt={imgAlt} />
+      <Box className="flex">
+        <Image className="z-10" width={800} height={800} src={imgSrc} alt={imgAlt} />
       </Box>
     </Flex>
   );

@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 
 import Footer from '@/app/components/footer/Footer';
 import Header from '@/app/components/header/Header';
-import { Providers } from 'app/providers';
 
 import 'app/styles/globals.css';
 
@@ -38,9 +37,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh">
-      <body className="max-w-full">
+      <body className="w-full overflow-x-hidden">
         <Header />
-        {children}
+        <div className="max-w-screen-lg mx-auto"> {children}</div>
         <Footer />
       </body>
     </html>
