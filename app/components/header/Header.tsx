@@ -11,13 +11,15 @@ import Button from '@/app/components/common/Button';
 import Dropdown from '@/app/components/common/overlay/Dropdown';
 import HEADER_ITEMS from '@/app/constants/content/header';
 
+import styles from '@/app/styles/components/header/Header.module.scss';
+
 const Header = () => {
   const [openLabel, setOpenLabel] = useState<string | null>(null);
   // const [openDrawer, setOpenDrawer] = useState<boolean>(false);
 
   return (
-    <nav className="max-w-screen-xl w-full h-24 z-10 flex justify-center items-center bg-white/5">
-      <div className="w-full flex justify-between items-center mx-auto p-4 md:">
+    // <nav className={styles.container}>
+      <div className={styles.container}>
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image src="/images/logo.png" width={180} height={48} alt="喜茲體能 Logo" />
         </Link>
@@ -51,7 +53,7 @@ const Header = () => {
         </button>
         {/* {openDrawer && <Drawer content />} */}
       </div>
-    </nav>
+    // </nav>
   );
 };
 

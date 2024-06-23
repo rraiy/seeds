@@ -15,7 +15,7 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 5000,
   appendDots: (dots: ReactElement) => (
     <div>
@@ -28,7 +28,7 @@ const settings = {
 
 interface Props {
   children: Array<React.ReactElement>;
-  className: string;
+className: string;
 }
 
 const Carousel = ({ children, className }: Props) => {
