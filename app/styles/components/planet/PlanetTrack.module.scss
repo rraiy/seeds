@@ -18,6 +18,10 @@
     top: 264px;
     left: 80px;
     @include left-right-animation(4.5s);
+    @media screen and (max-width: 990px) {
+      width: 62px;
+      top: 200px;
+    }
   }
 
   .orange {
@@ -25,6 +29,11 @@
     top: 400px;
     left: 292px;
     @include up-down-animation(4.8s);
+    @media screen and (max-width: 990px) {
+      width: 120px;
+      top: 312px;
+      left: 212px;
+    }
   }
 
   .yellow {
@@ -32,6 +41,11 @@
     top: 272px;
     left: 732px;
     @include upper-right-lower-left-animation;
+    @media screen and (max-width: 990px) {
+      width: 116px;
+      top: 160px;
+      left: 468px;
+    }
   }
 
   .blue {
@@ -39,6 +53,11 @@
     top: 556px;
     left: 524px;
     @include lower-right-upper-left-animation(5s);
+    @media screen and (max-width: 990px) {
+      width: 134px;
+      top: 412px;
+      left: 388px;
+    }
   }
 
   .red {
@@ -46,5 +65,9 @@
     top: 24px;
     left: 600px;
     @include upper-left-lower-right-animation(4.3s);
+    @media screen and (max-width: 990px) {
+      width: 62px;
+      left: 480px;
+    }
   }
 }

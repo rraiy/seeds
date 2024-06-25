@@ -15,7 +15,7 @@ import styles from '@/app/styles/components/header/Header.module.scss';
 
 const Header = () => {
   const [openLabel, setOpenLabel] = useState<string | null>(null);
-  const [openDrawer, setOpenDrawer] = useState<boolean>(true);
+  const [openDrawer, setOpenDrawer] = useState<boolean>(false);
 
   const handleMobileDrawer = () => {
     setOpenDrawer((pre) => !pre);

@@ -6,7 +6,7 @@ import styles from '@/app/styles/pages/home.module.scss';
 
 const ExploreLessons = () => {
   return (
-    <div className="flex flex-col justify-center items-center pb-48">
+    <div className="flex flex-col justify-center items-center">
       <Image className={styles.rocket} src="/images/icon_img/rocket.png" width={60} height={106} alt="class rocket" />
       <h2 className={styles.title}>{EXPLORE_INFO.title}</h2>
       <PlanetTrack />

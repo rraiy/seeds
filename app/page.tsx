@@ -15,10 +15,10 @@ import styles from '@/app/styles/pages/home.module.scss';
 
 export default function Home() {
   return (
-    <div className={clsx(styles.container, 'relative [&>img:not(:.bg-elements)]:z-10 [&>]')}>
+    <div className={clsx(styles.container, 'relative [&>*]:mb-32 desktop:w-screen')}>
       <main className="fill-container">
         {/* <HomeBanner /> */}
-        <Image src="/images/home_banner_2.jpg" width={1440} height={840} />
+        <Image src="/images/home_banner_2.jpg" width={2560} height={840} alt="喜茲體能" />
       </main>
       <ExploreLessons />
       <TextImageSection

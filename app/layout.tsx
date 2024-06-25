@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import Footer from '@/app/components/footer/Footer';
 import Header from '@/app/components/header/Header';
 
-import 'app/styles/globals.css';
-import 'app/styles/customClass.css';
+import '@/app/styles/customClass.css';
+import '@/app/styles/globals.css';
 
 const metaDataBasic = {
   title: '喜茲體能 - 適合所有人的肌力品牌',
