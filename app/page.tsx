@@ -17,7 +17,8 @@ export default function Home() {
   return (
     <div className={clsx(styles.container, 'relative [&>img:not(:.bg-elements)]:z-10 [&>]')}>
       <main className="fill-container">
-        <HomeBanner />
+        {/* <HomeBanner /> */}
+        <Image src="/images/home_banner_2.jpg" width={1440} height={840} />
       </main>
       <ExploreLessons />
       <TextImageSection

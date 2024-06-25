@@ -4,56 +4,59 @@ import Image from 'next/image';
 import Link from 'next/link';
 // import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import { FaBars } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 import Button from '@/app/components/common/Button';
-// import Drawer from '@/app/components/common/overlay/Drawer';
 import Dropdown from '@/app/components/common/overlay/Dropdown';
 import HEADER_ITEMS from '@/app/constants/content/header';
+import MobileNav from '@/app/components/header/MobileNav';
 
 import styles from '@/app/styles/components/header/Header.module.scss';
 
 const Header = () => {
   const [openLabel, setOpenLabel] = useState<string | null>(null);
-  // const [openDrawer, setOpenDrawer] = useState<boolean>(false);
+  const [openDrawer, setOpenDrawer] = useState<boolean>(true);
+
+  const handleMobileDrawer = () => {
+    setOpenDrawer((pre) => !pre);
+  };
 
   return (
-    // <nav className={styles.container}>
-      <div className={styles.container}>
-        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image src="/images/logo.png" width={180} height={48} alt="喜茲體能 Logo" />
-        </Link>
+    <nav className={styles.container}>
+      <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Image src="/images/logo.png" width={180} height={48} alt="喜茲體能 Logo" />
+      </Link>
 
-        <div className="md:hidden">
-          <ul className="flex font-medium [&>*]:mx-5">
-            {HEADER_ITEMS.map((item) => {
-              const { label, children } = item;
-              return (
-                <li
-                  key={label}
-                  className="relative block py-2 rounded cursor-pointer hover:font-bold md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  md:dark:hover:text-blue-500"
-                  onMouseEnter={() => setOpenLabel(label)}
-                  onMouseLeave={() => setOpenLabel(null)}
-                >
-                  {label}
-                  {children && <Dropdown open={openLabel === label} content={children} />}
-                </li>
-              );
-            })}
-            <Button text="聯絡我們" />
-          </ul>
-        </div>
+      <button
+        type="button"
+        className="hidden tablet:inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-secondary focus:outline-none focus:ring-2"
+        onClick={handleMobileDrawer}
+      >
+        {openDrawer ? <FaTimes className="h-8 w-8 text-primary" /> : <FaBars className="h-8 w-8 text-primary" />}
+      </button>
 
-        <button
-          type="button"
-          className="hidden md:inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg  hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-          // onClick={() => setOpenDrawer(true)}
-        >
-          <FaBars className="h-8 w-8 text-blue-500" />
-        </button>
-        {/* {openDrawer && <Drawer content />} */}
+      <div className="tablet:hidden">
+        <ul className="flex font-medium [&>*]:mx-5">
+          {HEADER_ITEMS.map((item) => {
+            const { label, children } = item;
+            return (
+              <li
+                key={label}
+                className="relative block py-2 rounded cursor-pointer hover:font-bold"
+                onMouseEnter={() => setOpenLabel(label)}
+                onMouseLeave={() => setOpenLabel(null)}
+              >
+                {label}
+                {children && <Dropdown open={openLabel === label} content={children} />}
+              </li>
+            );
+          })}
+          <Button text="聯絡我們" />
+        </ul>
       </div>
-    // </nav>
+
+      {openDrawer && <MobileNav />}
+    </nav>
   );
 };
 

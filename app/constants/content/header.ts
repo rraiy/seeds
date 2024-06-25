@@ -6,16 +6,24 @@ const HEADER_ITEMS: Array<iNavItem> = [
     children: [
       {
         label: '課程總覽',
-        href: '#',
+        href: '/lessons',
       },
       {
         label: '激勵課程',
-        href: '#',
+        href: '/muscle',
       },
     ],
   },
   {
-    label: '關於喜茲',
+    label: '查看場館',
+    href: '/',
+  },
+  {
+    label: '收費方案',
+    href: '#',
+  },
+  {
+    label: '教練介紹',
     href: '#',
   },
 ];
