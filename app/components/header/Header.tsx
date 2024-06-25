@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <nav className={styles.container}>
       <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-        <Image src="/images/logo.png" width={180} height={48} alt="喜茲體能 Logo" />
+        <Image className={styles.logo} src="/images/logo.png" width={180} height={48} alt="喜茲體能 Logo" />
       </Link>
 
       <button
