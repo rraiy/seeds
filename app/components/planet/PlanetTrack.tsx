@@ -7,7 +7,11 @@ import HoverPlanet from '@/app/components/planet/HoverPlanet';
 import LESSONS_INFO from '@/app/constants/content/home/exploreLesson';
 import styles from '@/app/styles/components/planet/PlanetTrack.module.scss';
 
-const PlanetTrack = ({ isMobile }) => {
+interface Props {
+  isMobile: boolean;
+}
+
+const PlanetTrack = ({ isMobile }: Props) => {
   return (
     <div className={styles.container}>
       <Image

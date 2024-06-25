@@ -13,7 +13,7 @@ import { EXPLORE_INFO } from '@/app/constants/content/home/exploreLesson';
 import styles from '@/app/styles/pages/home.module.scss';
 
 const ExploreLessons = () => {
-  const isMobile = isMobileDevice();
+  const isMobile = !!isMobileDevice();
   return (
     <div
       className={twMerge(
