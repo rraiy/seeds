@@ -1,8 +1,7 @@
-import { Grid, GridItem } from '@chakra-ui/react';
+// import { Grid, GridItem } from '@chakra-ui/react';
 
 import MultiCards from '@/app/components/common/MultiCards';
-
-import styles from '@/app/styles/components/common/TextWithCards.module.scss';
+import { twMerge } from 'tailwind-merge';
 
 const mock = [
   {
@@ -42,17 +41,17 @@ interface Props {
 
 const TextWithCards = ({ title, titleClass, text }: Props) => {
   return (
-    <div className="mb-24 z-10">
-      <Grid templateRows="256px 440px">
-        <GridItem className={styles['text-container']}>
-          <h2 className={titleClass}>{title}</h2>
+    <section className="mb-24 z-10">
+      <div className="flex flex-col items-center">
+        <div className="w-[688px] flex flex-col mb-8 mobile:w-[380px]">
+          <h2 className={twMerge(titleClass, 'text-center')}>{title}</h2>
           {text}
-        </GridItem>
-        <GridItem>
+        </div>
+        <div>
           <MultiCards cardsContent={mock} />
-        </GridItem>
-      </Grid>
-    </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

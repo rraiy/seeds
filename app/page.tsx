@@ -21,7 +21,9 @@ export default function Home() {
         <Image src="/images/home_banner_2.jpg" width={2560} height={840} alt="喜茲體能" />
       </main>
       <ExploreLessons />
-      {/* <TextImageSection
+
+      <TextImageSection
+        className="flex items-center justify-between desktop:flex-col"
         title={MONTHLY_CLASS.title}
         text={MONTHLY_CLASS.text}
         imgSrc={MONTHLY_CLASS.imgSrc}
@@ -29,19 +31,19 @@ export default function Home() {
         titleClass={styles.title}
       />
       <TextWithCards title={ABOUT.title} text={ABOUT.text} titleClass={styles.title} />
-      {bgElementUrl.urls.map((ele) => {
-        const { url, width, height, position } = ele;
-        return (
-          <Image
-            className={`bg-elements fill-container z-0 absolute ${position}`}
-            key={url}
-            src={url}
-            alt={bgElementUrl.alt}
-            width={width}
-            height={height}
-          />
-        );
-      })} */}
+      {/* // {bgElementUrl.urls.map((ele) => {
+      //   const { url, width, height, position } = ele;
+      //   return (
+      //     <Image
+      //       className={`bg-elements fill-container z-0 absolute ${position}`}
+      //       key={url}
+      //       src={url}
+      //       alt={bgElementUrl.alt}
+      //       width={width}
+      //       height={height}
+      //     />
+      //   );
+      // })}  */}
     </div>
   );
 }
