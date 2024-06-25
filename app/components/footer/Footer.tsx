@@ -7,14 +7,14 @@ import FOOTER_INFO from '@/app/constants/content/footer';
 const Footer = () => {
   return (
     <footer className="max-w-screen-xl w-full flex justify-center bg-primary">
-      <div className="w-max-[1440px] w-5/6 mx-automax-w-screen-xl p-4 py-20">
-        <div className="flex justify-between">
-          <div className="mb-6">
+      <div className="w-max-[1440px] w-5/6 mx-auto max-w-screen-xl p-4 py-20 tablet:w-screen mobile:p-8">
+        <div className="flex justify-between mobile:flex-col">
+          <div className="mb-6 mobile:mb-10">
             <Link href="/">
               <Image className="me-3" src="/images/footer-logo.png" width={180} height={48} alt="喜茲體能" />
             </Link>
           </div>
-          <div className="grid grid-cols-3 gap-20">
+          <div className="grid grid-cols-3 gap-20 tablet:gap-10 mobile:grid-cols-1">
             {FOOTER_INFO.map((item) => {
               return (
                 <div key={item.label}>
@@ -22,7 +22,7 @@ const Footer = () => {
                   <ul className="text-buttonStroke  font-medium">
                     {item.children &&
                       item.children.map((subItem) => (
-                        <li key={subItem.label} className="py-2">
+                        <li key={subItem.label} className="py-2 mobile:pl-4">
                           <Link href={subItem.href} className="hover:underline text-white text-sm">
                             {subItem.label}
                           </Link>

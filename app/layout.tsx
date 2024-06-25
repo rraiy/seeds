@@ -41,7 +41,7 @@ export default function RootLayout({
       <body className="w-full overflow-x-hidden">
         <Header />
         <div className="max-w-screen-lg mx-auto"> {children}</div>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
