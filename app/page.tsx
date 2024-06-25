@@ -21,7 +21,7 @@ export default function Home() {
         <Image src="/images/home_banner_2.jpg" width={2560} height={840} alt="喜茲體能" />
       </main>
       <ExploreLessons />
-      <TextImageSection
+      {/* <TextImageSection
         title={MONTHLY_CLASS.title}
         text={MONTHLY_CLASS.text}
         imgSrc={MONTHLY_CLASS.imgSrc}
@@ -41,7 +41,7 @@ export default function Home() {
             height={height}
           />
         );
-      })}
+      })} */}
     </div>
   );
 }

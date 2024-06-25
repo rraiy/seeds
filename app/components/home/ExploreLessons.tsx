@@ -1,15 +1,40 @@
-import Image from 'next/image';
+'use client';
 
-import { EXPLORE_INFO } from '@/app/constants/content/home/exploreLesson';
+import Image from 'next/image';
+import Link from 'next/link';
+import { twMerge } from 'tailwind-merge';
+
+import Button from '@/app/components/common/Button';
+import isMobileDevice from '@/app/utils/checkIsMobile';
+import LESSONS_INFO from '@/app/constants/content/home/exploreLesson';
 import PlanetTrack from '@/app/components/planet/PlanetTrack';
+import { EXPLORE_INFO } from '@/app/constants/content/home/exploreLesson';
+
 import styles from '@/app/styles/pages/home.module.scss';
 
 const ExploreLessons = () => {
+  const isMobile = isMobileDevice();
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div
+      className={twMerge(
+        `flex flex-col justify-center items-center tablet:relative tablet:overflow-x-hidden tablet:pt-4 ${isMobile ? 'fill-container' : ''}`,
+      )}
+    >
       <Image className={styles.rocket} src="/images/icon_img/rocket.png" width={60} height={106} alt="class rocket" />
       <h2 className={styles.title}>{EXPLORE_INFO.title}</h2>
-      <PlanetTrack />
+      <PlanetTrack isMobile={isMobile} />
+      {isMobile && (
+        <div className="absolute top-[288px] flex flex-col">
+          {LESSONS_INFO.map((lesson) => {
+            const { popup } = lesson;
+            return (
+              <Link className="py-2 w-[220px]" key={popup.name} href={popup.link}>
+                <Button text={popup.name} widthLarge />
+              </Link>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };

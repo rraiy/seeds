@@ -9,6 +9,10 @@
 
   > *:not(:global(.fill-container)) {
     width: 1200px;
+
+    @media screen and (max-width: 990px) {
+      width: calc(100vw - 40px)
+    }
   }
 
   .rocket {
@@ -19,4 +23,8 @@
 
 .title {
   @include section-title;
+
+  @media screen and (max-width: 990px) {
+    font-size: 28px;
+  }
 }

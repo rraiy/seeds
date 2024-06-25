@@ -21,7 +21,7 @@ const LessonTooltipContent = ({ content, btnText }: Props) => {
 
       <hr className="my-12 h-0.5 border-t-0 bg-secondary" />
       {content.link ? (
-        <Link href={content.link} className="block ">
+        <Link href={content.link} className="block">
           <Button text={btnText} widthLarge />
         </Link>
       ) : (

@@ -7,7 +7,7 @@ import HoverPlanet from '@/app/components/planet/HoverPlanet';
 import LESSONS_INFO from '@/app/constants/content/home/exploreLesson';
 import styles from '@/app/styles/components/planet/PlanetTrack.module.scss';
 
-const PlanetTrack = () => {
+const PlanetTrack = ({ isMobile }) => {
   return (
     <div className={styles.container}>
       <Image
@@ -23,6 +23,7 @@ const PlanetTrack = () => {
 
         return (
           <HoverPlanet
+            isMobile={isMobile}
             key={popup.name}
             className={className}
             src={src}

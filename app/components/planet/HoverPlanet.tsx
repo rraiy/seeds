@@ -15,10 +15,21 @@ interface Props {
   height: number;
   alt: string;
   popupContent: PopupContent;
+  isMobile: boolean;
   className?: string;
 }
 
-const HoverPlanet = ({ className, src, width, height, alt, popupContent }: Props) => {
+const HoverPlanet = ({ isMobile, className, src, width, height, alt, popupContent }: Props) => {
+  console.log(isMobile);
+
+  if (isMobile) {
+    return (
+      <div className={clsx(className, 'hover:z-10')}>
+        <Image src={src} width={width} height={height} alt={alt} />
+      </div>
+    );
+  }
+
   return (
     <Tooltip
       className={clsx(className, 'hover:z-10')}

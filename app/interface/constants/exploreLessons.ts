@@ -2,7 +2,7 @@ export interface PopupContent {
   name: string;
   description: string;
   subItem: string[];
-  link?: string;
+  link: string;
 }
 
 interface Planet {
@@ -11,7 +11,7 @@ interface Planet {
   width: number;
   height: number;
   alt: string;
-  link?: string;
+  link: string;
 }
 
 interface PlanetInfo {
