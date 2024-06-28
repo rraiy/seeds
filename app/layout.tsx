@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import Footer from '@/app/components/footer/Footer';
 import Header from '@/app/components/header/Header';
 
+import GlobalProvider from '@/app/contexts/GlobalContext';
+
 import '@/app/styles/customClass.css';
 import '@/app/styles/globals.css';
 
@@ -39,9 +41,11 @@ export default function RootLayout({
   return (
     <html lang="zh">
       <body className="w-full overflow-x-hidden">
-        <Header />
-        <div className="max-w-screen-lg mx-auto"> {children}</div>
-        <Footer />
+        <GlobalProvider>
+          <Header />
+          <div className="max-w-screen-lg mx-auto"> {children}</div>
+          <Footer />
+        </GlobalProvider>
       </body>
     </html>
   );

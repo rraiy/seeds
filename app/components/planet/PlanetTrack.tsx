@@ -5,13 +5,10 @@ import { twMerge } from 'tailwind-merge';
 
 import HoverPlanet from '@/app/components/planet/HoverPlanet';
 import LESSONS_INFO from '@/app/constants/content/home/exploreLesson';
+
 import styles from '@/app/styles/components/planet/PlanetTrack.module.scss';
 
-interface Props {
-  isMobile: boolean;
-}
-
-const PlanetTrack = ({ isMobile }: Props) => {
+const PlanetTrack = () => {
   return (
     <div className={styles.container}>
       <Image
@@ -27,7 +24,6 @@ const PlanetTrack = ({ isMobile }: Props) => {
 
         return (
           <HoverPlanet
-            isMobile={isMobile}
             key={popup.name}
             className={className}
             src={src}

@@ -2,18 +2,21 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useContext } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import Button from '@/app/components/common/Button';
-import isMobileDevice from '@/app/utils/checkIsMobile';
 import LESSONS_INFO from '@/app/constants/content/home/exploreLesson';
 import PlanetTrack from '@/app/components/planet/PlanetTrack';
 import { EXPLORE_INFO } from '@/app/constants/content/home/exploreLesson';
+import { GlobalContext } from '@/app/contexts/GlobalContext';
 
 import styles from '@/app/styles/pages/home.module.scss';
 
 const ExploreLessons = () => {
-  const isMobile = !!isMobileDevice();
+  const { isMobile } = useContext(GlobalContext);
+  console.log(isMobile);
+
   return (
     <div
       className={twMerge(
@@ -22,9 +25,9 @@ const ExploreLessons = () => {
     >
       <Image className={styles.rocket} src="/images/icon_img/rocket.png" width={60} height={106} alt="class rocket" />
       <h2 className={styles.title}>{EXPLORE_INFO.title}</h2>
-      <PlanetTrack isMobile={isMobile} />
+      <PlanetTrack />
       {isMobile && (
-        <div className="absolute top-[288px] flex flex-col">
+        <div className="hidden tablet:flex flex-col absolute top-[240px] ">
           {LESSONS_INFO.map((lesson) => {
             const { popup } = lesson;
             return (
