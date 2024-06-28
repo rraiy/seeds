@@ -43,7 +43,7 @@ export default function RootLayout({
       <body className="w-full overflow-x-hidden min-h-[880px]">
         <GlobalProvider>
           <Header />
-          <div className="max-w-screen-lg mt-[120px] tablet:mt-[80px]"> {children}</div>
+          <div className="max-w-screen-lg mt-[120px] tablet:mt-[80px]">{children}</div>
           <Footer />
         </GlobalProvider>
       </body>

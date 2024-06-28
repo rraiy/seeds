@@ -11,14 +11,14 @@ import TextImageSection from '@/app/components/common/TextImageSection';
 
 import styles from '@/app/styles/pages/home.module.scss';
 
-// TODO: [&>img:not(:.bg-elements)]:z-10 not working and tw config plugin!
+// TODO: [&>img:not(:.bg-elements)]:z-10 not working with tw config plugin!
 
 export default function Home() {
   return (
     <div
       className={clsx(styles.container, 'relative [&>*]:mb-60 desktop:w-screen desktop:[&>*]:mb-20 table:[&>*]:mb-6')}
     >
-      <main className="fill-container">
+      <main className="fill-container mt-[-120px] mobile:mt-[-80px]">
         {/* <HomeBanner /> */}
         <Image src="/images/home_banner_2.jpg" width={2560} height={840} alt="喜茲體能" />
       </main>
