@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { iNavItem } from '@/app/interface/constants/header';
 
 interface Props {
@@ -12,7 +14,7 @@ const Dropdown = ({ open = false, content }: Props) => {
     <ul id="test" className="absolute w-[152px] rounded-xl z-20 top-10 bg-secondary/90 p-5">
       {content.map((item) => (
         <li key={item.label} className="py-4 hover:text-primary/80">
-          {item.label}
+          {item.href ? <Link href={item.href}>{item.label}</Link> : <span>{item.label}</span>}
         </li>
       ))}
     </ul>

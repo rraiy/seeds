@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-// import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -50,7 +49,7 @@ const Header = () => {
                 onMouseEnter={() => setOpenLabel(label)}
                 onMouseLeave={() => setOpenLabel(null)}
               >
-                {label}
+                {item.href ? <Link href={item.href}>{label}</Link> : <span>{label}</span>}
                 {children && <Dropdown open={openLabel === label} content={children} />}
               </li>
             );

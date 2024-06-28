@@ -15,7 +15,6 @@ import styles from '@/app/styles/pages/home.module.scss';
 
 const ExploreLessons = () => {
   const { isMobile } = useContext(GlobalContext);
-  console.log(isMobile);
 
   return (
     <div

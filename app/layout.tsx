@@ -40,10 +40,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh">
-      <body className="w-full overflow-x-hidden">
+      <body className="w-full overflow-x-hidden min-h-[880px]">
         <GlobalProvider>
           <Header />
-          <div className="max-w-screen-lg mx-auto"> {children}</div>
+          <div className="max-w-screen-lg "> {children}</div>
           <Footer />
         </GlobalProvider>
       </body>

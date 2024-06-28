@@ -1,5 +1,3 @@
-// import { Grid, GridItem } from '@chakra-ui/react';
-
 import MultiCards from '@/app/components/common/MultiCards';
 import { twMerge } from 'tailwind-merge';
 
@@ -68,7 +66,6 @@ const TextWithCards = ({ title, titleClass, text }: Props) => {
           {text}
         </div>
         <div className={styles['cards-wrap']}>
-          {/* "desktop:w-[1000px] tablet:w-screen overflow-hidden "> */}
           <MultiCards cardsContent={mock} />
         </div>
       </div>
