@@ -5,11 +5,11 @@ module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     screens: {
-      mobileSm: {'max': '414px'},
-      mobile: {'max': '767px'},
-      tablet:{'max': '990px'},
-      desktop: {'max': '1200px'},
       xl: {'max': '1440px'},
+      desktop: {'max': '1200px'},
+      tablet:{'max': '990px'},
+      mobile: {'max': '767px'},
+      mobileSm: {'max': '414px'},
     },
     extend: {
       colors: {
