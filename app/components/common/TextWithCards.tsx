@@ -3,6 +3,8 @@
 import MultiCards from '@/app/components/common/MultiCards';
 import { twMerge } from 'tailwind-merge';
 
+import styles from '@/app/styles/components/common/TextWithCards.module.scss';
+
 const mock = [
   {
     imgSrc: '/images/about/info.png',
@@ -31,6 +33,24 @@ const mock = [
     buttonColor: 'second',
     buttonLink: '/',
   },
+  // {
+  //   imgSrc: '/images/about/fee.png',
+  //   alt: '費用說',
+  //   width: 360,
+  //   height: 440,
+  //   buttonText: '費用說明',
+  //   buttonColor: 'second',
+  //   buttonLink: '/',
+  // },
+  // {
+  //   imgSrc: '/images/about/fee.png',
+  //   alt: '費',
+  //   width: 360,
+  //   height: 440,
+  //   buttonText: '費用說明',
+  //   buttonColor: 'second',
+  //   buttonLink: '/',
+  // },
 ];
 
 interface Props {
@@ -47,7 +67,8 @@ const TextWithCards = ({ title, titleClass, text }: Props) => {
           <h2 className={twMerge(titleClass, 'text-center')}>{title}</h2>
           {text}
         </div>
-        <div>
+        <div className={styles['cards-wrap']}>
+          {/* "desktop:w-[1000px] tablet:w-screen overflow-hidden "> */}
           <MultiCards cardsContent={mock} />
         </div>
       </div>

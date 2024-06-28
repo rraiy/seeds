@@ -10,6 +10,11 @@
   z-index: 10;
   top: 0;
 
+  @media screen and (max-width: 750px) {
+    height: 60px;
+    padding: 12px;
+  }
+
   .logo {
     @media screen and (max-width: 990px) {
       width: 140px;

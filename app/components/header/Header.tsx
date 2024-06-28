@@ -32,7 +32,11 @@ const Header = () => {
         className="hidden tablet:inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-secondary focus:outline-none focus:ring-2"
         onClick={handleMobileDrawer}
       >
-        {openDrawer ? <FaTimes className="h-7 w-7 text-primary" /> : <FaBars className="h-7 w-7 text-primary" />}
+        {openDrawer ? (
+          <FaTimes className="h-6 w-6 text-primary bg-white" />
+        ) : (
+          <FaBars className="h-6 w-6 text-primary" />
+        )}
       </button>
 
       <div className="tablet:hidden">

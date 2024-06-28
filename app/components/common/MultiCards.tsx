@@ -20,7 +20,7 @@ interface Props {
 
 const MultiCards = ({ cardsContent }: Props) => {
   return (
-    <div className={styles.container}>
+    <div className={'flex overflow-x-scroll'}>
       {cardsContent.map((card) => {
         const { imgSrc, alt, width, height } = card;
         return (
