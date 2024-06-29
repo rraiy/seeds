@@ -17,7 +17,7 @@ const LessonsPage = () => {
           />
         </div>
 
-        <h2 className="section-title mb-0 ml-2 mobile:text-">課程介紹</h2>
+        <h2 className="section-title mb-0 ml-2 mobile:text-[28px]">課程介紹</h2>
       </div>
       <ContentImage />
     </div>

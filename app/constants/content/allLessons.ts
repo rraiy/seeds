@@ -6,8 +6,13 @@ interface Item {
   title: string;
   level: string;
   knowledgeLevel: number;
-  introduce: string;
+  introduction: string;
 }
+
+/**
+ * 課程名稱對照
+ * 肌力與體能 fitnessAndStrength fitness-and-strength
+ */
 
 const ALL_LESSONS: Item[] = [
   {
@@ -18,7 +23,8 @@ const ALL_LESSONS: Item[] = [
     title: '肌力與體能課程',
     level: '低 - 高',
     knowledgeLevel: 3,
-    introduce: '由企業或私人自組的自由重量團體課程，最少四人一班，一期八堂、每堂一小時。課程規範同自由重量團體課程。',
+    introduction:
+      '由企業或私人自組的自由重量團體課程，最少四人一班，一期八堂、每堂一小時。課程規範同自由重量團體課程。',
   },
   {
     imgPath: '/images/lessons/red_lesson.png',
@@ -28,7 +34,8 @@ const ALL_LESSONS: Item[] = [
     title: '回到肌礎',
     level: '低 - 高',
     knowledgeLevel: 1,
-    introduce: '由企業或私人自組的自由重量團體課程，最少四人一班，一期八堂、每堂一小時。課程規範同自由重量團體課程。',
+    introduction:
+      '由企業或私人自組的自由重量團體課程，最少四人一班，一期八堂、每堂一小時。課程規範同自由重量團體課程。',
   },
   {
     imgPath: '/images/lessons/green_lesson.png',
@@ -38,7 +45,8 @@ const ALL_LESSONS: Item[] = [
     title: '回到肌礎',
     level: '低 - 高',
     knowledgeLevel: 1,
-    introduce: '由企業或私人自組的自由重量團體課程，最少四人一班，一期八堂、每堂一小時。課程規範同自由重量團體課程。',
+    introduction:
+      '由企業或私人自組的自由重量團體課程，最少四人一班，一期八堂、每堂一小時。課程規範同自由重量團體課程。',
   },
   {
     imgPath: '/images/lessons/red_lesson.png',
@@ -48,7 +56,8 @@ const ALL_LESSONS: Item[] = [
     title: '回到肌礎',
     level: '低 - 高',
     knowledgeLevel: 1,
-    introduce: '由企業或私人自組的自由重量團體課程，最少四人一班，一期八堂、每堂一小時。課程規範同自由重量團體課程。',
+    introduction:
+      '由企業或私人自組的自由重量團體課程，最少四人一班，一期八堂、每堂一小時。課程規範同自由重量團體課程。',
   },
 ];
 

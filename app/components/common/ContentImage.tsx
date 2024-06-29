@@ -8,7 +8,7 @@ const ContentImage = () => {
   return (
     <section className="max-w-[1440px] w-screen [&>*]:mb-20 mobile:[&>*]:mb-4">
       {ALL_LESSONS.map((lesson) => {
-        const { title, imgPath, imgPosition, alt, iconPath, level, knowledgeLevel, introduce } = lesson;
+        const { title, imgPath, imgPosition, alt, iconPath, level, knowledgeLevel, introduction } = lesson;
         return (
           <div
             key={title}
@@ -33,7 +33,7 @@ const ContentImage = () => {
                   ))}
                 </p>
               </div>
-              <p>{introduce}</p>
+              <p>{introduction}</p>
               <Button text="了解更多" />
             </div>
           </div>

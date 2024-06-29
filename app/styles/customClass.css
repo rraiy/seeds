@@ -15,3 +15,20 @@
     font-size: 28px;
   }
 }
+
+/* 光暈 */
+.light-halo {
+  @apply absolute top-0 h-full w-12 from-white/50 to-transparent pointer-events-none;
+}
+
+.left-light-halo {
+  @apply light-halo;
+  left: 0;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.right-light-halo {
+  @apply light-halo;
+  right: 0;
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}

@@ -11,7 +11,7 @@ const HEADER_ITEMS: Array<iNavItem> = [
       },
       {
         label: '激勵課程',
-        href: '/muscle',
+        href: '/all-lessons/fitness-and-strength',
       },
     ],
   },
