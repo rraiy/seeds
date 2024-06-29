@@ -1,4 +1,4 @@
-interface SubLesson {
+export interface iSubLesson {
   name: string;
   introduction: string;
   baggage: string[];
@@ -10,7 +10,7 @@ interface SubLesson {
 interface LessonDetail {
   title: string;
   iconPath: string;
-  subLessons: SubLesson[];
+  subLessons: iSubLesson[];
 }
 
 interface iLessonsDetail {
@@ -48,7 +48,7 @@ const LessonsDetail: iLessonsDetail = {
         ],
       },
       {
-        name: '肌力與體能',
+        name: '回到基礎',
         introduction:
           '為每堂一小時的實作訓練課程，由喜茲體能的專業肌力體能教練帶領熱身、主動作及補強練習。練習動作包含：下肢蹲、硬舉系列、上肢垂直推拉、上肢水平推拉等系列動作。',
         baggage: ['水壺', '室內專用訓練鞋', '毛巾'],
