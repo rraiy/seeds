@@ -42,7 +42,7 @@ const LessonsDetail: iLessonsDetail = {
           '唯復課時亦須憑醫師證明始得復課。',
         ],
         imgPath: [
-          '/images/lessons/detail/lesson-fitness-1.jpg',
+          '/images/lessons/detail/image-49.jpg',
           '/images/lessons/detail/lesson-fitness-1.jpg',
           '/images/lessons/detail/lesson-fitness-1.jpg',
         ],

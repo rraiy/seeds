@@ -13,7 +13,7 @@ const Button = ({ text, icon, widthLarge = false, className, iconPosition = 'fro
     <button
       type="button"
       className={twMerge(
-        `w-32 flex justify-between items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium leading-normal text-white hover:bg-buttonHover ${widthLarge && 'w-full'}`,
+        `w-32 flex justify-around items-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium leading-normal text-white hover:bg-buttonHover ${widthLarge && 'w-full'}`,
         className,
       )}
     >

@@ -13,7 +13,7 @@ const LessonDetail = ({ content }: Props) => {
   const { name, introduction, baggage, user, caveat } = content;
 
   return (
-    <div className="w-[840px] [&>*]:mb-10 [&_h5]:font-bold [&_h5]:mb-4">
+    <div className="w-[840px] [&>*]:mb-10 [&_h5]:font-bold [&_h5]:mb-4 tablet:w-[86%]">
       <div className="flex flex-col items-center">
         <h2 className="section-title">{name}</h2>
         <Button text="報名課程" icon={<HiChevronRight />} iconPosition="back" />
@@ -40,8 +40,9 @@ const LessonDetail = ({ content }: Props) => {
       </div>
       <ul>
         {caveat.map((item, idx) => (
-          <li key={idx} className="before:content-['⦁'] before:mr-3 text-primary text-opacity-60">
-            {item}
+          <li key={idx} className="flex text-primary text-opacity-60">
+            <div className="before:content-['⦁'] before:mr-3" />
+            <span> {item}</span>
           </li>
         ))}
       </ul>

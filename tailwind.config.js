@@ -17,7 +17,7 @@ module.exports = {
         secondary: '#ECEBEB',
         headerBg: 'rgba(236, 235, 235, 0.9)',
         button:'rgba(43, 40, 40, 0.9)',
-        buttonHover:'rgba(43, 40, 40, 0.5)',
+        buttonHover:'rgba(43, 40, 40, 0.8)',
         buttonDisabled:'#918989',
         buttonStroke: '#AAAAAA',
         textDisabled: '#DEDEDE'

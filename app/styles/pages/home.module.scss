@@ -24,7 +24,7 @@
 .title {
   @include section-title;
 
-  @media screen and (max-width: 990px) {
-    font-size: 28px;
-  }
+  // @media screen and (max-width: 990px) {
+  //   font-size: 28px;
+  // }
 }

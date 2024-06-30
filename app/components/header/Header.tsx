@@ -20,6 +20,13 @@ const Header = () => {
     setOpenDrawer((pre) => !pre);
   };
 
+  const handleClose = () => {
+    console.log(1);
+
+    setOpenLabel(null);
+    setOpenDrawer(false);
+  };
+
   return (
     <nav className={styles.container}>
       <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -49,8 +56,14 @@ const Header = () => {
                 onMouseEnter={() => setOpenLabel(label)}
                 onMouseLeave={() => setOpenLabel(null)}
               >
-                {item.href ? <Link href={item.href}>{label}</Link> : <span>{label}</span>}
-                {children && <Dropdown open={openLabel === label} content={children} />}
+                {item.href ? (
+                  <Link href={item.href} onClick={handleClose}>
+                    {label}
+                  </Link>
+                ) : (
+                  <span>{label}</span>
+                )}
+                {children && <Dropdown open={openLabel === label} content={children} handleClose={handleClose} />}
               </li>
             );
           })}
@@ -58,7 +71,7 @@ const Header = () => {
         </ul>
       </div>
 
-      {openDrawer && <MobileNav />}
+      {openDrawer && <MobileNav handleClose={handleClose} />}
     </nav>
   );
 };

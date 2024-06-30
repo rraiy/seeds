@@ -6,15 +6,16 @@
   @apply relative block p-4 text-xl rounded cursor-pointer hover:font-bold;
 }
 
-.section-title {
+/* .section-title {
   font-size: 44px;
   margin-bottom: 20px;
   font-weight: bold;
 
   @media screen and (max-width: 750px) {
     font-size: 28px;
+    font-weight: medium;
   }
-}
+} */
 
 /* 光暈 */
 .light-halo {

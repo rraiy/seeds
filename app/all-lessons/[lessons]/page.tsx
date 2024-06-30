@@ -20,9 +20,9 @@ const SubLessons = ({ params }: { params: { lessons: lessonType } }) => {
         </p>
       </div>
       {subLessons.map((sub) => (
-        <div key={sub.name} className="flex flex-col items-center mb-28">
+        <div key={sub.name} className="flex flex-col items-center mb-28 mobile:mb-8">
           <ImgSlide count={sub.imgPath.length} hasCenter={true} imgs={sub.imgPath} />
-          <LessonDetail content={sub} />
+          {/* <LessonDetail content={sub} /> */}
         </div>
       ))}
     </div>

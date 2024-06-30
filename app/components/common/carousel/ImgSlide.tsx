@@ -1,10 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
+import Carousel from '@/app/components/common/carousel/Carousel';
 import getCenter from '@/app/utils/getCenter';
+import { GlobalContext } from '@/app/contexts/GlobalContext';
 
 interface Props {
   count: number;
@@ -24,7 +26,17 @@ interface Props {
 
 const ImgSlide = ({ count, imgs, hasCenter = false, className }: Props) => {
   const [isReady, setIsReady] = useState<boolean>(false);
+  const { isMobile } = useContext(GlobalContext);
+
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const imageNodes = imgs.map((item, idx) => {
+    return (
+      <div key={idx} className="min-w-[618px] flex justify-center items-center tablet:min-w-[84%]">
+        <Image width="0" height="0" sizes="100vw" className="w-full h-auto object-cover" src={item} alt="喜茲體能" />
+      </div>
+    );
+  });
 
   useEffect(() => {
     if (containerRef.current && hasCenter) {
@@ -53,18 +65,22 @@ const ImgSlide = ({ count, imgs, hasCenter = false, className }: Props) => {
   }, [hasCenter]);
 
   return (
-    <div className={twMerge('w-[1200px] min-h-[472px] relative tablet:w-[768px]', className)}>
-      <div className="left-light-halo" />
-      <div className="right-light-halo" />
-      <div className={`${isReady ? 'visible' : 'invisible'} w-full flex overflow-x-scroll`} ref={containerRef}>
-        {imgs.map((item, idx) => {
-          return (
-            <div key={idx} className="min-w-[618px] tablet:w-[40px]">
-              <Image width="0" height="0" sizes="100vw" className="w-full h-auto" src={item} alt="喜茲體能" />
-            </div>
-          );
-        })}
-      </div>
+    <div
+      className={twMerge(
+        'w-[1200px] min-h-[472px] flex justify-center relative desktop:w-[768px] tablet:w-[90%] border-4 border-red ',
+        className,
+      )}
+    >
+      {!isMobile && (
+        <>
+          <div className="left-light-halo" />
+          <div className="right-light-halo" />
+          <div className={`${isReady ? 'visible' : 'invisible'} w-full flex overflow-x-scroll`} ref={containerRef}>
+            {imageNodes}
+          </div>
+        </>
+      )}
+      {isMobile && <Carousel>{imageNodes}</Carousel>}
     </div>
   );
 };
