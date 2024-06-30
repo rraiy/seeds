@@ -3,14 +3,14 @@ import { iNavItem } from '@/app/interface/constants/header';
 const HEADER_ITEMS: Array<iNavItem> = [
   {
     label: '探索課程',
-    href: '/lessons',
+    href: '/all-lessons',
     children: [
       {
         label: '課程總覽',
-        href: '/lessons',
+        href: '/all-lessons',
       },
       {
-        label: '激勵課程',
+        label: '肌力與體能',
         href: '/all-lessons/fitness-and-strength',
       },
     ],

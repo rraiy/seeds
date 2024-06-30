@@ -59,7 +59,7 @@ interface Props {
 
 const TextWithCards = ({ title, titleClass, text }: Props) => {
   return (
-    <section className="mb-24 z-10">
+    <section className="z-10">
       <div className="flex flex-col items-center">
         <div className="w-[688px] flex flex-col mb-8 mobile:w-[380px]">
           <h2 className={twMerge(titleClass, 'text-center')}>{title}</h2>

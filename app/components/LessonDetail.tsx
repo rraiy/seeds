@@ -10,25 +10,22 @@ interface Props {
 }
 
 const LessonDetail = ({ content }: Props) => {
-  const { name, introduction, baggage, user, caveat } = content;
+  const { name, introduction, baggage, user } = content;
 
   return (
-    <div className="w-[840px] [&>*]:mb-10 [&_h5]:font-bold [&_h5]:mb-4 tablet:w-[86%]">
-      <div className="flex flex-col items-center">
-        <h2 className="section-title">{name}</h2>
-        <Button text="報名課程" icon={<HiChevronRight />} iconPosition="back" />
-      </div>
+    <div className="w-[500px] flex flex-col [&>div]:mb-10 [&_h5]:font-bold [&_h5]:mb-4 desktop:w-[35%] tablet:w-[86%] mobile:w-[380px]">
+      <h2 className="text-[32px] font-bold self-center">{name}</h2>
       <div>
         <h5>課程介紹</h5>
         <p>{introduction}</p>
       </div>
-      <div className="flex">
-        <div className="w-[50%]">
+      <div className="flex justify-between">
+        <div className="w-[70%]">
           <h5>本課程可自行攜帶</h5>
           <ul>
             {baggage.map((item, idx) => (
-              <li key={idx}>
-                {idx + 1}. {item}
+              <li key={idx} className="flex">
+                <p className="mr-2">{idx + 1}. </p> {item}
               </li>
             ))}
           </ul>
@@ -38,14 +35,13 @@ const LessonDetail = ({ content }: Props) => {
           <p>{user}</p>
         </div>
       </div>
-      <ul>
-        {caveat.map((item, idx) => (
-          <li key={idx} className="flex text-primary text-opacity-60">
-            <div className="before:content-['⦁'] before:mr-3" />
-            <span> {item}</span>
-          </li>
-        ))}
-      </ul>
+      <Button
+        className="tablet:self-center"
+        text="報名課程"
+        icon={<HiChevronRight />}
+        iconPosition="back"
+        mobileFull={true}
+      />
     </div>
   );
 };

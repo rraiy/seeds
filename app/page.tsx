@@ -16,7 +16,10 @@ import styles from '@/app/styles/pages/home.module.scss';
 export default function Home() {
   return (
     <div
-      className={clsx(styles.container, 'relative [&>*]:mb-60 desktop:w-screen desktop:[&>*]:mb-20 table:[&>*]:mb-6')}
+      className={clsx(
+        styles.container,
+        'relative [&>*]:mb-60 last:mb-0 desktop:w-screen desktop:[&>*]:mb-20 table:[&>*]:mb-6',
+      )}
     >
       <main className="fill-container mt-[-120px] mobile:mt-[-80px]">
         {/* <HomeBanner /> */}

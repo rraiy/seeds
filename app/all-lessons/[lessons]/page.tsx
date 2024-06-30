@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import { twMerge } from 'tailwind-merge';
 
-import LessonsDetail, { lessonType } from '@/app/constants/content/lessonsDetail';
-import ImgSlide from '@/app/components/common/carousel/ImgSlide';
+import Carousel from '@/app/components/common/carousel/Carousel';
+import LESSONS_DETAIL, { lessonType, LESSONS_CAVEAT } from '@/app/constants/content/lessonsDetail';
 import LessonDetail from '@/app/components/LessonDetail';
 
 const SubLessons = ({ params }: { params: { lessons: lessonType } }) => {
-  const content = LessonsDetail[params.lessons];
+  const content = LESSONS_DETAIL[params.lessons];
   const { title, iconPath, subLessons } = content;
 
   return (
@@ -19,12 +20,51 @@ const SubLessons = ({ params }: { params: { lessons: lessonType } }) => {
           <span className="font-bold">{title}</span>
         </p>
       </div>
-      {subLessons.map((sub) => (
-        <div key={sub.name} className="flex flex-col items-center mb-28 mobile:mb-8">
-          <ImgSlide count={sub.imgPath.length} hasCenter={true} imgs={sub.imgPath} />
-          {/* <LessonDetail content={sub} /> */}
-        </div>
-      ))}
+      {subLessons.map((sub, idx) => {
+        const isOdd = idx % 2 !== 0;
+        const imageNodes = sub.imgPath.map((item, idx) => {
+          return (
+            <div key={idx} className="min-w-[618px] flex justify-center items-center tablet:min-w-[84%]">
+              <Image
+                width="0"
+                height="0"
+                sizes="100vw"
+                className="w-full h-auto object-cover"
+                src={item}
+                alt="喜茲體能"
+              />
+            </div>
+          );
+        });
+        return (
+          <div
+            key={sub.name}
+            className={twMerge(
+              'w-[1200px] flex justify-between mb-12 desktop:w-[990px] tablet:w-[648px] tablet:flex-col tablet:items-center mobile:mb-16',
+              isOdd && 'flex-row-reverse',
+            )}
+          >
+            <div
+              className="w-[618px] h-[464px] desktop:w-[60%]
+            tablet:w-[90%] tablet:h-[auto] mobile:w-[400px]"
+            >
+              <Carousel className="[&_img]:object-cover">{imageNodes}</Carousel>
+            </div>
+            <LessonDetail content={sub} />
+          </div>
+        );
+      })}
+      <div className="mt-8 mobile:px-5">
+        <p className="mb-4 text-center">重要課程須知</p>
+        <ul>
+          {LESSONS_CAVEAT.map((item, idx) => (
+            <li key={idx} className="flex text-xs text-primary text-opacity-60">
+              <div className="before:content-['⦁'] before:mr-3" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

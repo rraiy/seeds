@@ -21,8 +21,6 @@ const Header = () => {
   };
 
   const handleClose = () => {
-    console.log(1);
-
     setOpenLabel(null);
     setOpenDrawer(false);
   };
