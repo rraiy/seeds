@@ -17,7 +17,7 @@ const HEADER_ITEMS: Array<iNavItem> = [
   },
   {
     label: '查看場館',
-    href: '/',
+    href: '/location',
   },
   {
     label: '收費方案',

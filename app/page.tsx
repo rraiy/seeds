@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import Image from 'next/image';
 
 import ABOUT from '@/app/constants/content/home/about';
 // import bgElementUrl from '@/app/constants/content/home/bgElements';

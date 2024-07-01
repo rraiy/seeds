@@ -31,10 +31,7 @@ const HoverPlanet = ({ className, src, width, height, alt, popupContent }: Props
   }
 
   return (
-    <Tooltip
-      className={clsx(className, 'hover:z-10')}
-      content={<LessonTooltipContent content={popupContent} btnText="了解更多" />}
-    >
+    <Tooltip className={clsx(className, 'hover:z-10')} content={<LessonTooltipContent content={popupContent} />}>
       {popupContent.link ? (
         <Link href={popupContent.link}>
           <Image className="hover:drop-shadow-planetLight" src={src} width={width} height={height} alt={alt} />

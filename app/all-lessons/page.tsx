@@ -6,7 +6,7 @@ const LessonsPage = () => {
   return (
     <div className="[&>*]:mb-20 flex flex-col items-center mobile:[&>*]:mb-8">
       <div className="flex items-center tablet:flex-col">
-        <div className="w-[60px] tablet:w-[40px]">
+        <div className="w-[40px] tablet:w-[32px]">
           <Image
             width="0"
             height="0"

@@ -4,10 +4,9 @@ import { PopupContent } from '@/app/interface/constants/exploreLessons';
 
 interface Props {
   content: PopupContent;
-  btnText?: string;
 }
 
-const LessonTooltipContent = ({ content, btnText }: Props) => {
+const LessonTooltipContent = ({ content }: Props) => {
   return (
     <div className="w-60 z-20 space-y-4">
       <p className="font-bold text-xl">{content.name}</p>

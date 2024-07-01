@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-// import { Box, Flex, Spacer } from '@chakra-ui/react';
 import { twMerge } from 'tailwind-merge';
 
 interface Props {
