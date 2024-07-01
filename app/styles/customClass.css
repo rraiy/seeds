@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .clip-hex {
+    clip-path: polygon(25% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 25%);
+  }
+}
+
 .mobile_nav_li {
   @apply relative block p-4 text-xl rounded cursor-pointer hover:font-bold;
 }
@@ -32,4 +38,33 @@
   @apply light-halo;
   right: 0;
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
+/* 切角六邊形 教練介紹 */
+
+/* 
+
+<div className="relative w-[332px] h-[540px] bg-slate-500 before:hex">
+          <span className="hex"></span>
+        </div>
+ */
+
+.hex::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  top: 0;
+  left: 0;
+  border-width: 80px 80px 0px 0px;
+  border-color: white transparent transparent transparent;
+}
+
+.hex::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  right: 0;
+  border-width: 0px 0px 80px 80px;
+  border-color: transparent transparent white transparent;
 }

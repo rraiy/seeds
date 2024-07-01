@@ -25,7 +25,7 @@ const HEADER_ITEMS: Array<iNavItem> = [
   },
   {
     label: '教練介紹',
-    href: '#',
+    href: '/coach',
   },
 ];
 
