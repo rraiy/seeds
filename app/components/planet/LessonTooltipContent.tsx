@@ -1,5 +1,5 @@
-import Button from '@/app/components/common/Button';
-import Link from 'next/link';
+import { HiOutlineInformationCircle } from 'react-icons/hi2';
+
 import { PopupContent } from '@/app/interface/constants/exploreLessons';
 
 interface Props {
@@ -20,13 +20,10 @@ const LessonTooltipContent = ({ content, btnText }: Props) => {
       </ul>
 
       <hr className="my-12 h-0.5 border-t-0 bg-secondary" />
-      {content.link ? (
-        <Link href={content.link} className="block">
-          <Button text={btnText} widthLarge />
-        </Link>
-      ) : (
-        <Button text={btnText} widthLarge />
-      )}
+      <div className="flex items-center">
+        <HiOutlineInformationCircle className="mr-2" />
+        <p>點擊星球進入課程頁面</p>
+      </div>
     </div>
   );
 };

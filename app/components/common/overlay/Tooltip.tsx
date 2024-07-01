@@ -9,7 +9,7 @@ const Tooltip = ({ content, children, className }: Props) => {
   return (
     <div className={`relative group inline-block ${className}`}>
       {children}
-      <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-max p-4 bg-white text-sm rounded-2xl border-solid border-2 border-[#E4E8EF] opacity-0 group-hover:opacity-100 transition-opacity">
+      <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-max p-4 bg-white text-sm rounded-2xl border-solid border-2 border-[#E4E8EF] hidden group-hover:block transition-opacity">
         {content}
       </div>
     </div>

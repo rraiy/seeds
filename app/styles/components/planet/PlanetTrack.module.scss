@@ -6,10 +6,6 @@
   > a {
     > img:not(.track){
       cursor: pointer;
-  
-      &:hover {
-        filter: drop-shadow(2mm 4mm 2mm rgb(249, 233, 86, 0.8)) ;
-      }
     }
   }
 

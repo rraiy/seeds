@@ -5,9 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useContext } from 'react';
 
-import { GlobalContext } from '@/app/contexts/GlobalContext';
 import Tooltip from '@/app/components/common/overlay/Tooltip';
 import LessonTooltipContent from '@/app/components/planet/LessonTooltipContent';
+import { GlobalContext } from '@/app/contexts/GlobalContext';
 import { PopupContent } from '@/app/interface/constants/exploreLessons';
 
 interface Props {
@@ -37,7 +37,7 @@ const HoverPlanet = ({ className, src, width, height, alt, popupContent }: Props
     >
       {popupContent.link ? (
         <Link href={popupContent.link}>
-          <Image src={src} width={width} height={height} alt={alt} />
+          <Image className="hover:drop-shadow-planetLight" src={src} width={width} height={height} alt={alt} />
         </Link>
       ) : (
         <Image src={src} width={width} height={height} alt={alt} />

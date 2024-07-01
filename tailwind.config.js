@@ -22,6 +22,9 @@ module.exports = {
         buttonStroke: '#AAAAAA',
         textDisabled: '#DEDEDE'
       },
+      dropShadow:{
+        'planetLight':'2mm 2mm 2mm rgb(249, 233, 86, 0.8)'
+      }
     },
   },
   plugins: [
