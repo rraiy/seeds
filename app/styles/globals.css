@@ -50,6 +50,13 @@ button {
   line-height: 1.5rem;
 }
 
-li.slick-active span {
+/* for libs: react-slick */
+
+li.slick-active div {
   opacity: 1;
+}
+
+/* To avoid flash white when sliding infinitely https://github.com/kenwheeler/slick/issues/1890 */
+.slick-track {
+  transition-delay: 10ms;
 }

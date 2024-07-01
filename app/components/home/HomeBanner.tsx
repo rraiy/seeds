@@ -1,17 +1,22 @@
 import Image from 'next/image';
 
+import BANNER_IMG from '@/app/constants/content/home/banner';
 import Carousel from '@/app/components/common/carousel/Carousel';
-import styles from '@/app/styles/components/HomeBanner.module.scss';
-import BANNER_IMG_SIZE from '@/app/constants/style/homeBanner';
 
 function HomeBanner() {
-  const pcWidth = BANNER_IMG_SIZE.desktop.width;
-  const pcHeight = BANNER_IMG_SIZE.desktop.height;
-
   return (
-    <Carousel className={styles.carousel}>
-      <Image src="/images/home_banner_2.jpg" width={pcWidth} height={pcHeight} alt="123" />
-      <Image src="/images/home_banner_3.jpg" width={pcWidth} height={pcHeight} alt="123" />
+    <Carousel className="[&_img]:object-cover mobile:min-h-[100%]">
+      {BANNER_IMG.map((img: string) => (
+        <Image
+          key={img}
+          width="0"
+          height="0"
+          sizes="100vw"
+          className="w-full h-auto object-cover mobile:h-[60vh]"
+          src={img}
+          alt="喜茲體能"
+        />
+      ))}
     </Carousel>
   );
 }

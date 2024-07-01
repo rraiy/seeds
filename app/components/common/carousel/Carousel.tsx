@@ -11,18 +11,18 @@ const settings = {
   dots: true,
   arrows: false,
   infinite: true,
+  adaptiveHeight: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 5000,
   appendDots: (dots: ReactElement) => (
     <div>
-      <ul className="mb-16">{dots} </ul>
+      <ul className="mb-8">{dots} </ul>
     </div>
   ),
-  customPaging: () => <span className="absolute text-xl text-white opacity-50">&#9679;</span>,
-  dotsClass: clsx('slick-dots'),
+  customPaging: () => <div className="w-[24px] h-[2px] bg-white opacity-50" />,
 };
 
 interface Props {

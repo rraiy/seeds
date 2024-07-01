@@ -4,7 +4,7 @@ import Image from 'next/image';
 import ABOUT from '@/app/constants/content/home/about';
 // import bgElementUrl from '@/app/constants/content/home/bgElements';
 import ExploreLessons from '@/app/components/home/ExploreLessons';
-// import HomeBanner from '@/app/components/home/HomeBanner';
+import HomeBanner from '@/app/components/home/HomeBanner';
 import MONTHLY_CLASS from '@/app/constants/content/home/monthlyClass';
 import TextWithCards from '@/app/components/common/TextWithCards';
 import TextImageSection from '@/app/components/common/TextImageSection';
@@ -21,10 +21,10 @@ export default function Home() {
         'relative [&>*]:mb-60 last:mb-0 desktop:w-screen desktop:[&>*]:mb-20 table:[&>*]:mb-6',
       )}
     >
-      <main className="fill-container mt-[-120px] mobile:mt-[-80px]">
-        {/* <HomeBanner /> */}
-        <Image src="/images/home_banner_2.jpg" width={2560} height={840} alt="喜茲體能" />
-      </main>
+      <div className="fill-container w-screen mt-[-120px] mobile:mt-[-80px] mobile:min-h-[50vh]">
+        <HomeBanner />
+        {/* <Image src="/images/home_banner_2.jpg" width={2560} height={840} alt="喜茲體能" /> */}
+      </div>
       <ExploreLessons />
 
       <TextImageSection
