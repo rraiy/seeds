@@ -21,7 +21,7 @@ const HEADER_ITEMS: Array<iNavItem> = [
   },
   {
     label: '收費方案',
-    href: '#',
+    href: '/fee',
   },
   {
     label: '教練介紹',

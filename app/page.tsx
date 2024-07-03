@@ -17,7 +17,7 @@ export default function Home() {
     <div
       className={clsx(
         styles.container,
-        'relative [&>*]:mb-60 last:mb-0 desktop:w-screen desktop:[&>*]:mb-20 table:[&>*]:mb-6',
+        'relative [&>*]:mb-40 last:mb-0 desktop:w-screen desktop:[&>*]:mb-20 table:[&>*]:mb-6',
       )}
     >
       <div className="fill-container w-screen mt-[-120px] mobile:mt-[-80px] mobile:min-h-[50vh]">
