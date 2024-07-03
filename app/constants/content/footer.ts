@@ -1,11 +1,11 @@
 const FOOTER_INFO = [
   {
     label: '課程介紹',
-    href: '#',
+    href: '',
     children: [
       {
-        label: '激力課程',
-        href: '#',
+        label: '肌力課程',
+        href: '/all-lessons/fitness-and-strength',
       },
       {
         label: '回到肌礎',
@@ -27,15 +27,15 @@ const FOOTER_INFO = [
     children: [
       {
         label: '場館資訊',
-        href: '#',
+        href: '/location',
       },
       {
         label: '喜茲教練',
-        href: '#',
+        href: '/coach',
       },
       {
         label: '收費資訊',
-        href: '#',
+        href: '/fee',
       },
     ],
   },

@@ -65,7 +65,9 @@ const Header = () => {
               </li>
             );
           })}
-          <Button text="聯絡我們" />
+          <Link href="/contact">
+            <Button text="聯絡我們" />
+          </Link>
         </ul>
       </div>
 

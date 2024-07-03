@@ -50,7 +50,10 @@ const Footer = () => {
                   <FaInstagramSquare className="h-8 w-8" />
                   <span className="sr-only">Instagram page</span>
                 </Link>
-                <Link href="#" className="text-buttonStroke hover:text-white dark:hover:text-white ms-5">
+                <Link
+                  href="https://lin.ee/S49cXRP"
+                  className="text-buttonStroke hover:text-white dark:hover:text-white ms-5"
+                >
                   <FaLine className="h-8 w-8" />
                   <span className="sr-only">Line</span>
                 </Link>
