@@ -4,6 +4,7 @@ export interface iSubLesson {
   baggage: string[];
   user: string;
   imgPath: string[];
+  btnLink?: string;
 }
 
 interface LessonDetail {
@@ -35,6 +36,7 @@ const LESSONS_DETAIL: iLessonsDetail = {
           '/images/lessons/detail/lesson-fitness-1.jpg',
           '/images/lessons/detail/lesson-fitness-1.jpg',
         ],
+        btnLink: '/register',
       },
       {
         name: '回到基礎',

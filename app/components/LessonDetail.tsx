@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { HiChevronRight } from 'react-icons/hi2';
 
 import Button from '@/app/components/common/Button';
@@ -35,13 +36,17 @@ const LessonDetail = ({ content }: Props) => {
           <p>{user}</p>
         </div>
       </div>
-      <Button
-        className="tablet:self-center"
-        text="報名課程"
-        icon={<HiChevronRight />}
-        iconPosition="back"
-        mobileFull={true}
-      />
+      {content.btnLink && (
+        <Link href={content.btnLink}>
+          <Button
+            className="tablet:self-center"
+            text="報名課程"
+            icon={<HiChevronRight />}
+            iconPosition="back"
+            mobileFull={true}
+          />
+        </Link>
+      )}
     </div>
   );
 };

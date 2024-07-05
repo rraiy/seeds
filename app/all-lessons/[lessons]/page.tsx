@@ -15,7 +15,7 @@ const SubLessons = ({ params }: { params: { lessons: lessonType } }) => {
         <div className="w-[40px] mb-5 tablet:w-[40px]">
           <Image width="0" height="0" sizes="100vw" className="w-full h-auto" src={iconPath} alt="喜茲體能" />
         </div>
-        <p className="">
+        <p>
           課程介紹 {'> '}
           <span className="font-bold">{title}</span>
         </p>
