@@ -22,8 +22,12 @@ module.exports = {
         buttonStroke: '#AAAAAA',
         textDisabled: '#DEDEDE'
       },
-      dropShadow:{
+      dropShadow: {
         'planetLight':'2mm 2mm 2mm rgb(249, 233, 86, 0.8)'
+      },
+      backgroundImage: {
+        'home': "url('/images/home-bg-pc.jpg')",
+        'home-mobile': "url('/images/home-bg-mobile.jpg')",
       }
     },
   },

@@ -61,7 +61,7 @@ const TextWithCards = ({ title, titleClass, text }: Props) => {
   return (
     <section className="z-10">
       <div className="flex flex-col items-center">
-        <div className="w-[688px] flex flex-col mb-8 mobile:w-[380px]">
+        <div className="w-[688px] flex flex-col mb-8 mobile:w-fit">
           <h2 className={twMerge(titleClass, 'text-center')}>{title}</h2>
           {text}
         </div>

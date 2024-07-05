@@ -17,7 +17,7 @@ export default function Home() {
     <div
       className={clsx(
         styles.container,
-        'relative [&>*]:mb-40 last:mb-0 desktop:w-screen desktop:[&>*]:mb-20 table:[&>*]:mb-6',
+        'relative bg-img-no-repeat bg-home [&>*]:mb-40 last:mb-0 desktop:w-screen desktop:[&>*]:mb-20 tablet:[&>*]:mb-16 mobile:bg-home-mobile',
       )}
     >
       <div className="fill-container w-screen mt-[-120px] mobile:mt-[-80px] mobile:min-h-[50vh]">
@@ -35,20 +35,6 @@ export default function Home() {
         titleClass={styles.title}
       />
       <TextWithCards title={ABOUT.title} text={ABOUT.text} titleClass={styles.title} />
-      {/* {bgElementUrl.urls.map((ele) => {
-        const { url, width, height, position } = ele;
-        const rate = isMobile ? 0.5 : 1;
-        return (
-          <Image
-            className={`bg-elements fill-container z-0 absolute ${position}`}
-            key={url}
-            src={url}
-            alt={bgElementUrl.alt}
-            width={width * rate}
-            height={height * rate}
-          />
-        );
-      })} */}
     </div>
   );
 }

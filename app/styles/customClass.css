@@ -68,3 +68,7 @@
   border-width: 0px 0px 80px 80px;
   border-color: transparent transparent white transparent;
 }
+
+.bg-img-no-repeat {
+  @apply bg-no-repeat bg-center;
+}
