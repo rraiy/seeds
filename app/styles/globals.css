@@ -58,5 +58,5 @@ li.slick-active div {
 
 /* To avoid flash white when sliding infinitely https://github.com/kenwheeler/slick/issues/1890 */
 .slick-track {
-  transition-delay: 10ms;
+  transition-delay: 50ms;
 }

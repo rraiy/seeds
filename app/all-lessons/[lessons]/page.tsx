@@ -54,7 +54,7 @@ const SubLessons = ({ params }: { params: { lessons: lessonType } }) => {
           </div>
         );
       })}
-      <div className="mt-8 mobile:px-5">
+      <div className="self-start mt-8 mobile:px-5">
         <p className="mb-4 text-center">重要課程須知</p>
         <ul>
           {LESSONS_CAVEAT.map((item, idx) => (

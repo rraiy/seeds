@@ -8,10 +8,6 @@ const LOCATION_INFO = {
       info: '105 台北市松山區復興北路 145 號 6 樓',
     },
     {
-      title: '營業時間',
-      info: '10 AM - 6 PM',
-    },
-    {
       title: '交通方式',
       info: '搭乘捷運至南京復興站 7 號出口，步行三分鐘',
     },
