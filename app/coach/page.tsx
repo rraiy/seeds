@@ -1,6 +1,7 @@
 import { HiOutlineRocketLaunch } from 'react-icons/hi2';
 
 import CoachSection from '@/app/components/CoachSection';
+import FadeInSection from '@/app/components/common/FadeInSection';
 
 const CoachPage = () => {
   return (
@@ -9,7 +10,9 @@ const CoachPage = () => {
         <HiOutlineRocketLaunch className="w-[40px] h-[40px] tablet:w-[40px]" />
         <h2 className="section-title mb-0 ml-2 mobile:text-[28px]">教練介紹</h2>
       </div>
-      <CoachSection />
+      <FadeInSection>
+        <CoachSection />
+      </FadeInSection>
     </div>
   );
 };

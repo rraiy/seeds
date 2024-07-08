@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
 
 import Carousel from '@/app/components/common/carousel/Carousel';
+import FadeInSection from '@/app/components/common/FadeInSection';
 import LESSONS_DETAIL, { lessonType, LESSONS_CAVEAT } from '@/app/constants/content/lessonsDetail';
 import LessonDetail from '@/app/components/LessonDetail';
 
@@ -37,21 +38,22 @@ const SubLessons = ({ params }: { params: { lessons: lessonType } }) => {
           );
         });
         return (
-          <div
-            key={sub.name}
-            className={twMerge(
-              'w-[1200px] flex justify-between mb-12 desktop:w-[990px] tablet:w-[648px] tablet:flex-col tablet:items-center mobile:mb-16',
-              isOdd && 'flex-row-reverse',
-            )}
-          >
+          <FadeInSection key={sub.name}>
             <div
-              className="w-[618px] h-[464px] desktop:w-[60%]
-            tablet:w-[90%] tablet:h-[auto] mobile:w-[400px]"
+              className={twMerge(
+                'w-[1200px] flex justify-between mb-12 desktop:w-[990px] tablet:w-[648px] tablet:flex-col tablet:items-center mobile:mb-16',
+                isOdd && 'flex-row-reverse',
+              )}
             >
-              <Carousel className="[&_img]:object-cover">{imageNodes}</Carousel>
+              <div
+                className="w-[618px] h-[464px] desktop:w-[60%]
+            tablet:w-[90%] tablet:h-[auto] mobile:w-[400px]"
+              >
+                <Carousel className="[&_img]:object-cover">{imageNodes}</Carousel>
+              </div>
+              <LessonDetail content={sub} />
             </div>
-            <LessonDetail content={sub} />
-          </div>
+          </FadeInSection>
         );
       })}
       <div className="self-start mt-8 mobile:px-5">

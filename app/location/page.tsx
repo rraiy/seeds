@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { HiOutlineMapPin } from 'react-icons/hi2';
 
+import FadeInSection from '@/app/components/common/FadeInSection';
 import LOCATION_INFO from '@/app/constants/content/location';
 
 const LocationPage = () => {
@@ -25,17 +26,18 @@ const LocationPage = () => {
             </div>
           ))}
         </div>
-
-        <div className="w-[440px] h-[440px] tablet:max-w-[560px] tablet:mb-8 tablet:w-[100vw]">
-          <iframe
-            className="border-0"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1925.3606940247537!2d121.54277680268822!3d25.05262393765114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab5051dc0d51%3A0x42a5e5f29f3dc9a7!2z5Zac6Iyy6auU6IO9IFNlZWRzIFRyYWluaW5n772c6IKM5Yqb6IiH6auU6IO96KiT57e05Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1720059938808!5m2!1szh-TW!2stw"
-            width="100%"
-            height="480"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+        <FadeInSection>
+          <div className="w-[440px] h-[440px] tablet:max-w-[560px] tablet:mb-8 tablet:w-[100vw]">
+            <iframe
+              className="border-0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1925.3606940247537!2d121.54277680268822!3d25.05262393765114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab5051dc0d51%3A0x42a5e5f29f3dc9a7!2z5Zac6Iyy6auU6IO9IFNlZWRzIFRyYWluaW5n772c6IKM5Yqb6IiH6auU6IO96KiT57e05Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1720059938808!5m2!1szh-TW!2stw"
+              width="100%"
+              height="480"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </FadeInSection>
       </div>
     </div>
   );

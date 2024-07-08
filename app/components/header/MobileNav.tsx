@@ -8,7 +8,7 @@ interface Props {
 
 const MobileNav = ({ handleClose }: Props) => {
   return (
-    <div className="w-[calc(100%-40px)] absolute top-[100px] right-4 rounded-md bg-white p-4">
+    <div>
       <ul className="flex-col font-medium [&>*]:mx-5">
         {HEADER_ITEMS.map((item) => {
           const { label, children } = item;

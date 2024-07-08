@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { useTransition, animated } from '@react-spring/web';
 
 import Button from '@/app/components/common/Button';
 import Dropdown from '@/app/components/common/overlay/Dropdown';
@@ -24,6 +25,13 @@ const Header = () => {
     setOpenLabel(null);
     setOpenDrawer(false);
   };
+
+  const transitions = useTransition(openDrawer, {
+    from: { transform: 'translateY(-100%)', opacity: 0 },
+    enter: { transform: 'translateY(0%)', opacity: 1 },
+    leave: { transform: 'translateY(-100%)', opacity: 0 },
+    config: { tension: 220, friction: 20 },
+  });
 
   return (
     <nav className={styles.container}>
@@ -71,7 +79,18 @@ const Header = () => {
         </ul>
       </div>
 
-      {openDrawer && <MobileNav handleClose={handleClose} />}
+      {/* {openDrawer && <MobileNav handleClose={handleClose} />} */}
+      {transitions(
+        (styles, item) =>
+          item && (
+            <animated.div
+              style={styles}
+              className="w-[calc(100%-40px)] absolute top-[100px] right-4 rounded-md bg-white p-4"
+            >
+              <MobileNav handleClose={handleClose} />
+            </animated.div>
+          ),
+      )}
     </nav>
   );
 };
