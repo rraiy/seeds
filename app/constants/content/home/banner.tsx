@@ -1,3 +1,9 @@
-const BANNER_IMG = ['/images/home_banner_2.jpg', '/images/home_banner_3.jpg'];
+const BANNER_IMG = [
+  '/images/kv/01.png',
+  '/images/kv/02.png',
+  '/images/kv/03.png',
+  '/images/kv/04.png',
+  '/images/kv/05.png',
+];
 
 export default BANNER_IMG;

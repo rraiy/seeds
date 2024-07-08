@@ -2,33 +2,23 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import Button from '@/app/components/common/Button';
-import styles from '@/app/styles/components/common/MultiCards.module.scss';
-
-type tImgCardInfo = {
-  imgSrc: string;
-  alt: string;
-  width: number;
-  height: number;
-  buttonText?: string;
-  buttonColor?: string;
-  buttonLink?: string;
-};
+import iImgCardInfo from '@/app/interface/constants/about';
 
 interface Props {
-  cardsContent: tImgCardInfo[];
+  cardsContent: iImgCardInfo[];
 }
 
 const MultiCards = ({ cardsContent }: Props) => {
   return (
-    <div className={'flex overflow-x-scroll'}>
+    <div className="flex overflow-x-scroll">
       {cardsContent.map((card) => {
-        const { imgSrc, alt, width, height } = card;
+        const { imgSrc, alt } = card;
         return (
-          <div key={alt} className={styles['card-container']}>
-            <Image width={width} height={height} src={imgSrc} alt={alt} />
+          <div key={alt} className="min-w-[340px] relative mx-4">
+            <Image width="0" height="0" sizes="100vw" className="w-full h-auto" src={imgSrc} alt={alt} />
             {card.buttonText && card.buttonLink && (
               <Link href={card.buttonLink}>
-                <Button text={card.buttonText} className={styles.button} />
+                <Button text={card.buttonText} className="absolute bottom-10 left-1/2 -translate-x-1/2	" />
               </Link>
             )}
           </div>

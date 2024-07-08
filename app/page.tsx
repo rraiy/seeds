@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import ABOUT from '@/app/constants/content/home/about';
+import ABOUT, { ABOUT_CARDS } from '@/app/constants/content/home/about';
 import ExploreLessons from '@/app/components/home/ExploreLessons';
 import FadeInSection from './components/common/FadeInSection';
 import HomeBanner from '@/app/components/home/HomeBanner';
@@ -17,7 +17,7 @@ export default function Home() {
     <div
       className={clsx(
         styles.container,
-        'relative bg-img-no-repeat bg-home [&>*]:mb-40 last:mb-0 desktop:w-screen desktop:[&>*]:mb-20 tablet:[&>*]:mb-16 mobile:bg-home-mobile',
+        'relative bg-img-no-repeat bg-home [&>*]:mb-40 last:mb-0 desktop:w-screen desktop:[&>*]:mb-20 tablet:[&>*]:mb-10 mobile:bg-home-mobile',
       )}
     >
       <div className="fill-container w-screen min-h-[800px] mt-[-120px] mobile:mt-[-80px] mobile:min-h-[50vh]">
@@ -40,7 +40,7 @@ export default function Home() {
       </FadeInSection>
 
       <FadeInSection>
-        <TextWithCards title={ABOUT.title} text={ABOUT.text} titleClass={styles.title} />
+        <TextWithCards title={ABOUT.title} text={ABOUT.text} titleClass={styles.title} cardsContent={ABOUT_CARDS} />
       </FadeInSection>
     </div>
   );

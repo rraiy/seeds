@@ -37,9 +37,9 @@
 
   .orange {
     position: absolute;
-    top: 400px;
-    left: 292px;
-    @include up-down-animation(4.8s);
+    top: 428px;
+    left: 540px;
+    @include up-down-animation(3s);
     @media screen and (max-width: 990px) {
       width: 120px;
       top: 312px;
@@ -54,7 +54,7 @@
 
   .yellow {
     position: absolute;
-    top: 272px;
+    top: 88px;
     left: 732px;
     @include upper-right-lower-left-animation;
     @media screen and (max-width: 990px) {
@@ -71,8 +71,8 @@
 
   .blue {
     position: absolute;
-    top: 556px;
-    left: 524px;
+    top: 340px;
+    left: 36px;
     @include lower-right-upper-left-animation(5s);
     @media screen and (max-width: 990px) {
       width: 134px;

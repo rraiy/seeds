@@ -8,17 +8,17 @@ import { twMerge } from 'tailwind-merge';
 
 const settings = {
   dots: true,
-  arrows: false,
+  arrows: true,
   infinite: true,
   adaptiveHeight: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 4000,
   appendDots: (dots: ReactElement) => (
     <div>
-      <ul className="mb-10">{dots} </ul>
+      <ul className="max-w-[300px] mb-28 mobile:mb-10 mobile:max-w-full">{dots} </ul>
     </div>
   ),
   customPaging: () => <div className="w-[24px] h-[2px] bg-white opacity-50" />,
