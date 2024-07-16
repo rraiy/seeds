@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useTransition, animated } from '@react-spring/web';
@@ -12,10 +13,13 @@ import HEADER_ITEMS from '@/app/constants/content/header';
 import MobileNav from '@/app/components/header/MobileNav';
 
 import styles from '@/app/styles/components/header/Header.module.scss';
+import { twMerge } from 'tailwind-merge';
 
 const Header = () => {
   const [openLabel, setOpenLabel] = useState<string | null>(null);
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
+  const pathname = usePathname();
+  console.log(pathname);
 
   const handleMobileDrawer = () => {
     setOpenDrawer((pre) => !pre);
@@ -34,7 +38,7 @@ const Header = () => {
   });
 
   return (
-    <nav className={styles.container}>
+    <nav className={twMerge(styles.container, pathname !== '/' && 'bg-black')}>
       <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
         <Image className={styles.logo} src="/images/logo.png" width={180} height={48} alt="喜茲體能 Logo" />
       </Link>
