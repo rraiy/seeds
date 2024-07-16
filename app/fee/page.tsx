@@ -11,7 +11,7 @@ const FeePage = () => {
         <h2 className="section-title mb-0 ml-2 mobile:text-[28px]">收費方式</h2>
       </div>
       <FadeInSection>
-        <Image src="/images/fee.jpg" width={440} height={625} alt="喜茲體能費用" />
+        <Image src="/images/fee.png" width={1000} height={482} alt="喜茲體能費用" />
       </FadeInSection>
     </div>
   );

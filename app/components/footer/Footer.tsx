@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex justify-between mobile:flex-col">
           <div className="mb-6 mobile:mb-10">
             <Link href="/">
-              <Image className="me-3" src="/images/footer-logo.png" width={180} height={48} alt="喜茲體能" />
+              <Image className="me-3" src="/images/logo.png" width={180} height={48} alt="喜茲體能" />
             </Link>
           </div>
           <div className="grid grid-cols-3 gap-20 tablet:gap-10 mobile:grid-cols-1">

@@ -18,7 +18,7 @@ const settings = {
   autoplaySpeed: 4000,
   appendDots: (dots: ReactElement) => (
     <div>
-      <ul className="max-w-[300px] mb-28 mobile:mb-10 mobile:max-w-full">{dots} </ul>
+      <ul className="max-w-[300px] mb-16 mobile:mb-28 mobile:max-w-full">{dots} </ul>
     </div>
   ),
   customPaging: () => <div className="w-[24px] h-[2px] bg-white opacity-50" />,

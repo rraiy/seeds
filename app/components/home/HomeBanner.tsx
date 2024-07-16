@@ -5,7 +5,7 @@ import Carousel from '@/app/components/common/carousel/Carousel';
 
 function HomeBanner() {
   return (
-    <Carousel className=" mobile:min-h-[100%]">
+    <Carousel className="mobile:min-h-[100%]">
       {BANNER_IMG.map((img: string) => (
         <Image
           key={img}

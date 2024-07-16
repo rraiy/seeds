@@ -10,18 +10,33 @@ const CoachSection = () => {
 
   const coachImg = COACH.map((item) => item.imgPath);
   const activeInfo = COACH[activeIdx];
+  console.log(activeInfo);
 
   return (
     <div className="w-[1200px] flex justify-between desktop:w-[768px] desktop:flex-col-reverse desktop:items-start mobile:w-[400px]">
-      <div className="[&>div]:mb-8 tablet:mb-10">
-        <h3 className="mb-16 text-4xl">{activeInfo.name} 教練</h3>
+      <div className="w-[400px] [&>div]:mb-8 tablet:mb-10">
+        <h3 className="mb-16 text-4xl mobile:mb-8">{activeInfo.name}</h3>
         <div>
           <h4 className="font-bold text-xl mb-2">資歷</h4>
-          <p>{activeInfo.info}</p>
+          <ul>
+            {activeInfo.info.map((item) => (
+              <li key="item" className="flex">
+                <div className="before:content-['⦁'] before:mr-3" />
+                <p>{item}</p>
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
           <h4 className="font-bold text-xl mb-2">專長</h4>
-          <p>{activeInfo.skill}</p>
+          <ul>
+            {activeInfo.skill.map((item) => (
+              <li key="item" className="flex">
+                <div className="before:content-['⦁'] before:mr-3" />
+                <p>{item}</p>
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
           <h4 className="font-bold text-xl mb-2">特質</h4>

@@ -52,7 +52,7 @@ const Header = () => {
       </button>
 
       <div className="tablet:hidden">
-        <ul className="flex font-medium [&>*]:mx-5">
+        <ul className="flex font-medium [&>*]:mx-5 text-white">
           {HEADER_ITEMS.map((item) => {
             const { label, children } = item;
             return (

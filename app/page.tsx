@@ -20,7 +20,7 @@ export default function Home() {
         'relative bg-img-no-repeat bg-home [&>*]:mb-40 last:mb-0 desktop:w-screen desktop:[&>*]:mb-20 tablet:[&>*]:mb-10 mobile:bg-home-mobile',
       )}
     >
-      <div className="fill-container w-screen min-h-[800px] mt-[-120px] mobile:mt-[-80px] mobile:min-h-[50vh]">
+      <div className="fill-container w-screen min-h-[800px] mt-[-120px] mobile:mt-[-120px] mobile:min-h-[50vh]">
         <HomeBanner />
       </div>
 
