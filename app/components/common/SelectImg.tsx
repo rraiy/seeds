@@ -26,13 +26,16 @@ const SelectImg = ({ imgs, className, onSelectCallback }: Props) => {
           <div
             key={item}
             className={twMerge(
-              'relative w-[180px] h-[540px] transition-all	duration-500 mobile:w-[25%]',
-              isActive && 'w-[320px] clip-hex mobile:w-[40%]',
+              'relative w-[180px] h-[540px] transition-all duration-500 mobile:w-[25%]',
+              isActive && 'w-[320px] clip-hex mobile:w-[40%] overflow-hidden',
             )}
             onClick={() => handleSelectCallback(idx)}
           >
             <Image
-              className="object-cover rounded-md"
+              className={twMerge(
+                'object-cover rounded-md',
+                isActive && 'transition-all duration-500 transform scale-125',
+              )}
               src={item}
               width={0}
               height={0}

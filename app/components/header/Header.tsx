@@ -58,7 +58,7 @@ const Header = () => {
             return (
               <li
                 key={label}
-                className="relative block py-2 rounded cursor-pointer hover:font-bold"
+                className="relative block py-2 rounded cursor-pointer hover:font-bold hover:text-gray-300"
                 onMouseEnter={() => setOpenLabel(label)}
                 onMouseLeave={() => setOpenLabel(null)}
               >
