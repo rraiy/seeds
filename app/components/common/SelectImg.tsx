@@ -1,4 +1,5 @@
 'use client';
+
 import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
 import { useState } from 'react';
@@ -42,41 +43,11 @@ const SelectImg = ({ imgs, className, onSelectCallback }: Props) => {
               fill
               sizes="100vw"
               alt="喜茲體能 教練"
+              // placeholder="blur"
             />
           </div>
         );
       })}
-      {/* <div className={twMerge('relative w-[332px] h-[540px]', active && 'clip-hex')}>
-            <Image
-              className="object-cover"
-              src="/images/coach/coach_1.png"
-              width={332}
-              height={540}
-              alt="喜茲體能 教練"
-            />
-          </div>
-          <div className="relative w-[160px] h-[540px]">
-            <Image
-              className="object-cover"
-              src="/images/coach/coach_1.png"
-              width={0}
-              height={0}
-              fill
-              sizes="100vw"
-              alt="喜茲體能 教練"
-            />
-          </div>
-          <div className="relative w-[160px] h-[540px]">
-            <Image
-              className="object-cover"
-              src="/images/coach/coach_1.png"
-              width={0}
-              height={0}
-              fill
-              sizes="100vw"
-              alt="喜茲體能 教練"
-            />
-          </div> */}
     </div>
   );
 };

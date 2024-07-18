@@ -10,7 +10,6 @@ const CoachSection = () => {
 
   const coachImg = COACH.map((item) => item.imgPath);
   const activeInfo = COACH[activeIdx];
-  console.log(activeInfo);
 
   return (
     <div className="w-[1200px] flex justify-between desktop:w-[768px] desktop:flex-col-reverse desktop:items-start mobile:w-[400px]">
