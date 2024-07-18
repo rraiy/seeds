@@ -16,7 +16,7 @@ const COACH = [
       '專題講座/教練培訓',
     ],
     personality: '擁有12年的教學經驗，教學風格活潑且專業深入淺出，讓初學者能快速進入狀況，帶領學員安全穩健成長。',
-    imgPath: '/images/coach/coach_1.jpg',
+    imgPath: '/images/coach/coach_01.jpg',
   },
   {
     name: '肌力與體能教練 盧裕文',
@@ -34,7 +34,7 @@ const COACH = [
       '表演性質肌力與體能訓練',
     ],
     personality: '盧裕文教練擁有7年的教學經驗，教學風格簡單且專業，口語指令簡單扼要，帶領學員領悟出精髓，並肩強壯。',
-    imgPath: '/images/coach/coach_2.jpg',
+    imgPath: '/images/coach/coach_02.jpg',
   },
   {
     name: '肌力與體能教練 林榆鈞',

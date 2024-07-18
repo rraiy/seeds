@@ -27,8 +27,8 @@ const SelectImg = ({ imgs, className, onSelectCallback }: Props) => {
           <div
             key={item}
             className={twMerge(
-              'relative w-[180px] h-[540px] transition-all duration-500 mobile:w-[25%]',
-              isActive && 'w-[320px] clip-hex mobile:w-[40%] overflow-hidden',
+              'relative w-[128px] h-[540px] transition-all duration-500 mobile:w-[25%]',
+              isActive && 'w-[280px] clip-hex mobile:w-[40%] overflow-hidden',
             )}
             onClick={() => handleSelectCallback(idx)}
           >
