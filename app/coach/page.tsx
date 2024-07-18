@@ -1,6 +1,6 @@
 import { HiOutlineRocketLaunch } from 'react-icons/hi2';
 
-import CoachSection from '@/app/components/CoachSection';
+import CoachSection from '@/app/components/coach/CoachSection';
 import FadeInSection from '@/app/components/common/FadeInSection';
 
 const CoachPage = () => {

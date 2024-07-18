@@ -4,7 +4,7 @@
 
 @layer utilities {
   .clip-hex {
-    clip-path: polygon(25% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 25%);
+    clip-path: polygon(15% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%);
   }
 }
 
@@ -55,7 +55,7 @@
   width: 0;
   top: 0;
   left: 0;
-  border-width: 80px 80px 0px 0px;
+  border-width: 60px 60px 0px 0px;
   border-color: white transparent transparent transparent;
 }
 
@@ -65,7 +65,7 @@
   width: 0;
   bottom: 0;
   right: 0;
-  border-width: 0px 0px 80px 80px;
+  border-width: 0px 0px 60px 60px;
   border-color: transparent transparent white transparent;
 }
 

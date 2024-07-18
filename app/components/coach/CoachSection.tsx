@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 
-import COACH from '../constants/content/coach';
-import SelectImg from '@/app/components/common/SelectImg';
+import COACH from '../../constants/content/coach';
+import SelectImg from '@/app/components/coach/SelectImg';
 
 const CoachSection = () => {
   const [activeIdx, setActiveIdx] = useState<number>(0);
