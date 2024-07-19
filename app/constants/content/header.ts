@@ -4,16 +4,16 @@ const HEADER_ITEMS: Array<iNavItem> = [
   {
     label: '探索課程',
     href: '/all-lessons',
-    children: [
-      {
-        label: '課程總覽',
-        href: '/all-lessons',
-      },
-      {
-        label: '肌力與體能',
-        href: '/all-lessons/fitness-and-strength',
-      },
-    ],
+    // children: [
+    //   {
+    //     label: '課程總覽',
+    //     href: '/all-lessons',
+    //   },
+    //   {
+    //     label: '肌力與體能',
+    //     href: '/all-lessons/fitness-and-strength',
+    //   },
+    // ],
   },
   {
     label: '查看場館',

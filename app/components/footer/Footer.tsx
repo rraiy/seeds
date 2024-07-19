@@ -36,8 +36,15 @@ const Footer = () => {
               <p className="mb-6 font-semibold text-white text-l">聯絡我們</p>
               <div className="flex">
                 <Link
-                  href="https://www.facebook.com/seedstraininghq"
+                  href="https://lin.ee/S49cXRP"
                   className="text-buttonStroke hover:text-white dark:hover:text-white"
+                >
+                  <FaLine className="h-8 w-8" />
+                  <span className="sr-only">Line</span>
+                </Link>
+                <Link
+                  href="https://www.facebook.com/seedstraininghq"
+                  className="text-buttonStroke hover:text-white dark:hover:text-white ms-5"
                 >
                   <FaFacebookSquare className="h-8 w-8" />
                   <span className="sr-only">Facebook page</span>
@@ -49,13 +56,6 @@ const Footer = () => {
                 >
                   <FaInstagramSquare className="h-8 w-8" />
                   <span className="sr-only">Instagram page</span>
-                </Link>
-                <Link
-                  href="https://lin.ee/S49cXRP"
-                  className="text-buttonStroke hover:text-white dark:hover:text-white ms-5"
-                >
-                  <FaLine className="h-8 w-8" />
-                  <span className="sr-only">Line</span>
                 </Link>
               </div>
             </div>

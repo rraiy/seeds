@@ -1,6 +1,6 @@
 const LOCATION_INFO = {
   title: '喜茲體能',
-  imgPath: '/images/gym_location.jpg',
+  imgPath: '/images/gym_location.png',
 
   items: [
     {

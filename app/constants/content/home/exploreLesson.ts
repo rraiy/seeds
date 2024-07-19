@@ -27,7 +27,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       name: '越野跑訓練',
       description: '肌力與體能的描述',
       subItem: ['SkyHunter 越野跑訓練營', '士林越野官方訓練營', '越野跑肌力研習 6HR'],
-      link: '/',
+      link: '/all-lessons',
     },
     planet: {
       className: styles.orange,
@@ -35,7 +35,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       width: 120,
       height: 120,
       alt: 'universe',
-      link: '/',
+      link: '/all-lessons',
     },
   },
   {
@@ -43,7 +43,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       name: '肌力與體能訓練',
       description: '跑步課程的描述',
       subItem: ['私人教練課', '團體課', '私人/企業包班', '回到肌礎研習 8HR'],
-      link: '/all-lessons/fitness-and-strength',
+      link: '/all-lessons',
     },
     planet: {
       className: styles.yellow,
@@ -51,7 +51,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       width: 164,
       height: 156,
       alt: 'universe',
-      link: '/all-lessons/fitness-and-strength',
+      link: '/all-lessons',
     },
   },
   {
@@ -59,7 +59,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       name: '其他課程',
       description: 'mock',
       subItem: ['101登高賽訓練營 ft.周青', '強韌力：解剖肌動學力量復原課程'],
-      link: '/',
+      link: '/all-lessons',
     },
     planet: {
       className: styles.blue,
@@ -67,7 +67,7 @@ const LESSONS_INFO: PlanetInfo[] = [
       width: 188,
       height: 108,
       alt: 'universe',
-      link: '/all-lessons/other',
+      link: '/all-lessons',
     },
   },
   // {

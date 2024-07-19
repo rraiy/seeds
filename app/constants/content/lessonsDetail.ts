@@ -22,7 +22,7 @@ export type lessonType = keyof iLessonsDetail;
 
 const LESSONS_DETAIL: iLessonsDetail = {
   'fitness-and-strength': {
-    title: '肌力與體能',
+    title: '肌力與體能訓練課程',
     iconPath: '/images/universe/green_planet.png',
     subLessons: [
       {

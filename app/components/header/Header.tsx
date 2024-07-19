@@ -19,7 +19,6 @@ const Header = () => {
   const [openLabel, setOpenLabel] = useState<string | null>(null);
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const pathname = usePathname();
-  console.log(pathname);
 
   const handleMobileDrawer = () => {
     setOpenDrawer((pre) => !pre);
@@ -77,7 +76,7 @@ const Header = () => {
               </li>
             );
           })}
-          <Link href="/contact">
+          <Link href="https://lin.ee/S49cXRP">
             <Button text="聯絡我們" />
           </Link>
         </ul>
