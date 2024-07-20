@@ -3,9 +3,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useTransition, animated } from '@react-spring/web';
+
+import { GlobalContext } from '@/app/contexts/GlobalContext';
 
 import Button from '@/app/components/common/Button';
 import Dropdown from '@/app/components/common/overlay/Dropdown';
@@ -19,6 +21,7 @@ const Header = () => {
   const [openLabel, setOpenLabel] = useState<string | null>(null);
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const pathname = usePathname();
+  const { isMobile } = useContext(GlobalContext);
 
   const handleMobileDrawer = () => {
     setOpenDrawer((pre) => !pre);
@@ -37,7 +40,7 @@ const Header = () => {
   });
 
   return (
-    <nav className={twMerge(styles.container, pathname !== '/' && 'bg-black')}>
+    <nav className={twMerge(styles.container, (pathname !== '/' || isMobile) && 'bg-black')}>
       <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
         <Image className={styles.logo} src="/images/logo.png" width={180} height={48} alt="喜茲體能 Logo" />
       </Link>
@@ -82,7 +85,6 @@ const Header = () => {
         </ul>
       </div>
 
-      {/* {openDrawer && <MobileNav handleClose={handleClose} />} */}
       {transitions(
         (styles, item) =>
           item && (

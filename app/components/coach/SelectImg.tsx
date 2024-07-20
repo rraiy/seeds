@@ -20,15 +20,15 @@ const SelectImg = ({ imgs, className, onSelectCallback }: Props) => {
   };
 
   return (
-    <div className={twMerge('flex [&>*]:ml-4 mobile:w-[100%]', className)}>
+    <div className={twMerge('flex [&>*]:ml-4 mobile:w-[100%] mobile:flex-wrap', className)}>
       {imgs.map((item, idx) => {
         const isActive = idx === activeIdx;
         return (
           <div
             key={item}
             className={twMerge(
-              'relative w-[128px] h-[540px] transition-all duration-500 mobile:w-[50%] mobile:flex-wrap',
-              isActive && 'w-[280px] clip-hex mobile:w-[40%] overflow-hidden',
+              'relative w-[128px] h-[540px] transition-all duration-500 mobile:w-[40%] mobile:h-[300px] ',
+              isActive && 'w-[280px] clip-hex mobile:w-[40%] mobile:mb-5 overflow-hidden',
             )}
             onClick={() => handleSelectCallback(idx)}
           >

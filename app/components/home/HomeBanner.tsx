@@ -26,7 +26,7 @@ function HomeBanner() {
   return (
     <div>
       {allImagesLoaded ? (
-        <Carousel className="mobile:min-h-[100%]">
+        <Carousel className="mobile:min-h-[100%] mobile:mt-[20px]">
           {BANNER_IMG.map((img, index) => (
             <Image
               key={img}

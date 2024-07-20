@@ -5,15 +5,15 @@ const FOOTER_INFO = [
     children: [
       {
         label: '肌力與體能訓練',
-        href: '/all-lessons/fitness-and-strength',
+        href: '/all-lessons',
       },
       {
         label: '越野跑系列課程',
-        href: '#',
+        href: '/all-lessons',
       },
       {
         label: '其他課程',
-        href: '#',
+        href: '/all-lessons',
       },
     ],
   },
